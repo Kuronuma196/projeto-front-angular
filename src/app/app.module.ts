@@ -25,6 +25,21 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductUpdateComponent } from './component/product/product-update/product-update.component';
+import { ProductDeleteComponent } from './component/product/product-delete/product-delete.component';
+import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
+import { ClienteReadComponent } from './component/cliente/cliente-read/cliente-read.component';
+import { PagamentoCrudComponent } from './views/pagamento-crud/pagamento-crud.component';
+import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
+import { FornecedorCreateComponent } from './component/fornecedor/fornecedor-create/fornecedor-create.component';
+import { FornecedorUpdateComponent } from './component/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FornecedorDeleteComponent } from './component/fornecedor/fornecedor-delete/fornecedor-delete.component';
+import { PagamentoCreateComponent } from './component/Pagamento/pagamento-create/pagamento-create.component';
+import { PagamentoUpdateComponent } from './component/Pagamento/pagamento-update/pagamento-update.component';
+import { PagamentoDeleteComponent } from './component/Pagamento/pagamento-delete/pagamento-delete.component';
+import { ClienteCreateComponent } from './component/cliente/cliente-create/cliente-create.component';
+import { ClienteUpdateComponent } from './component/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
+
 
 
 @NgModule({
@@ -39,7 +54,21 @@ import { ProductUpdateComponent } from './component/product/product-update/produ
     FornecedorReadComponent,
     PagamentoReadComponent,
     ProductCreateComponent,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    ProductDeleteComponent,
+    ClienteCrudComponent,
+    ClienteReadComponent,
+    PagamentoCrudComponent,
+    FornecedorCrudComponent,
+    FornecedorCreateComponent,
+    FornecedorUpdateComponent,
+    FornecedorDeleteComponent,
+    PagamentoCreateComponent,
+    PagamentoUpdateComponent,
+    PagamentoDeleteComponent,
+    ClienteCreateComponent,
+    ClienteUpdateComponent,
+    ClienteDeleteComponent,
   ],
   imports: [
     BrowserModule,

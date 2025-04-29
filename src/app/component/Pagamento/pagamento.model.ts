@@ -1,5 +1,6 @@
 export interface Pagamento{
-    id?: number
-    name: string
-    price: number
+    fpgId?: number
+    fpgNome: string
+    fpgPrice: number
+    fpgDescricao: string
 }

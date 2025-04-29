@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Registra Pagamento</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="pagamento.fpgNome" name="fpgNome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="pagamento.fpgPrice" name="fpgPrice">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="pagamento.fpgDescricao" name="fpgDescricao">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="createPagamento()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>
