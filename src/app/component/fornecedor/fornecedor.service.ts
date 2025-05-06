@@ -36,7 +36,7 @@ export class fornecedorService {
   }
 
   update(Fornecedor: Fornecedor): Observable<Fornecedor>{
-    const url = `${this.baseUrl}/${Fornecedor.id}`
+    const url = `${this.baseUrl}/${Fornecedor.forId}`
     return this.http.delete<Fornecedor>(url)
   }
 

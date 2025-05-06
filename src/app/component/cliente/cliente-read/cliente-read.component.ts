@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ClienteService } from '../cliente.service';
+import { Cliente } from '../cliente.model';
 
 @Component({
   selector: 'app-cliente-read',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./cliente-read.component.css']
 })
 export class ClienteReadComponent {
+  cliente!: Cliente[]
+  displayedColumns = ['cliId', 'cliNome', 'cliCpf', 'cliEmail', 'cliTelefone', 'action']
+
+  constructor(private clienteService: ClienteService) { }
+
+  ngOnInit(): void {
+    this.clienteService.read().subscribe(cliente => {
+      this.cliente = cliente
+      console.log(cliente)  
+    })
+  }
 
 }

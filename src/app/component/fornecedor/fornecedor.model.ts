@@ -1,5 +1,6 @@
 export interface Fornecedor{
-    id?: number
-    name: string
-    qtde: number
+    forId?: number
+    forNomeFantasia:string
+    forCnpj: string
+    forRazaoSocial:string
 }

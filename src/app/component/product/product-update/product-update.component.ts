@@ -16,8 +16,8 @@ export class ProductUpdateComponent {
     private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')
-    this.productService.readById(id!).subscribe((product: Product) =>{
+    const proId = this.route.snapshot.paramMap.get('proId')
+    this.productService.readById(proId!).subscribe((product: Product) =>{
       this.product = product
     })
   }

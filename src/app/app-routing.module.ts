@@ -9,6 +9,10 @@ import { PagamentoUpdateComponent } from './component/Pagamento/pagamento-update
 import { PagamentoCrudComponent } from './views/pagamento-crud/pagamento-crud.component';
 import { ProductDeleteComponent } from './component/product/product-delete/product-delete.component';
 import { PagamentoDeleteComponent } from './component/Pagamento/pagamento-delete/pagamento-delete.component';
+import { ClienteCreateComponent } from './component/cliente/cliente-create/cliente-create.component';
+import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
+import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
+import { FornecedorCreateComponent } from './component/fornecedor/fornecedor-create/fornecedor-create.component';
 
 const routes: Routes = [
 {
@@ -24,11 +28,11 @@ const routes: Routes = [
   component:ProductCreateComponent
 },
 {
-  path: "products/update/:id",
+  path: "products/update/:proId",
   component: ProductUpdateComponent
 },
 {
-  path: "products/delete/:id",
+  path: "products/delete/:proId",
   component: ProductDeleteComponent
 },
 {
@@ -46,6 +50,22 @@ const routes: Routes = [
 {
   path: "formaPagamento/delete/:id",
   component: PagamentoDeleteComponent
+},
+{
+  path: "clientes",
+  component:ClienteCrudComponent
+},
+{
+  path: "clientes/create",
+  component:ClienteCreateComponent
+},
+{
+  path: "fornecedores",
+  component:FornecedorCrudComponent
+},
+{
+  path: "fornecedores/create",
+  component:FornecedorCreateComponent
 },
 
 

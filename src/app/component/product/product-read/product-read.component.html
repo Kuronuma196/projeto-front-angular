@@ -14,7 +14,7 @@
   
       <!-- Name Column -->
       <ng-container matColumnDef="proNome">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
         <td mat-cell *matCellDef="let row">{{row.proNome}}</td>
       </ng-container>
   
@@ -36,12 +36,12 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>Ações</th>                     
         <td mat-cell *matCellDef="let row">
-            <a routerLink="/produtos/update/{{ row.proId }}" class="edit">
+            <a routerLink="/products/update/{{ row.proId }}" class="edit">
                 <i class="material-icons">
                     edit
                 </i>
             </a>
-            <a routerLink="/produtos/delete/{{ row.proId }}" class="delete"> 
+            <a routerLink="/products/delete/{{ row.proId }}" class="delete"> 
                 <i class="material-icons">
                     delete
                 </i>
