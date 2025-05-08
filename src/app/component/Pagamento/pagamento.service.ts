@@ -37,7 +37,7 @@ export class PagamentoService {
 
   update(pagamento: Pagamento): Observable<Pagamento>{
     const url = `${this.baseUrl}/${pagamento.fpgId}`
-    return this.http.delete<Pagamento>(url)
+    return this.http.put<Pagamento>(url,pagamento)
   }
 
   delete(id: number): Observable<Pagamento>{

@@ -3,6 +3,10 @@
     font-weight: 300;
     line-height: 1.2;
 }
+.home {
+    background: linear-gradient(to right, #030e2b, #66a6ff); /* Exemplo: azul claro para azul médio */
+
+}
 
 .home .subtitle{
     font-size: 1.1rem;

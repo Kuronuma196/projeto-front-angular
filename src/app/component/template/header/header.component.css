@@ -1,7 +1,10 @@
-.header{
+
+.header {
     display: flex;
     align-items: center;
+    background: linear-gradient(to right, #030e2b, #66a6ff); /* Exemplo: azul claro para azul médio */
 }
+
 
 .header a {
     display: flex;
@@ -10,11 +13,13 @@
 }
 
 .header .logo {
-    max-height: 32px;
+    max-height: 35px;
 }
-
-.header .title-group{
+.header .title-group2{
     padding-left: 25px;
+}
+.header .title-group{
+    padding-left: 55px;
 }
 
 .header .title-group i {

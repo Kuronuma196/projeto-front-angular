@@ -38,7 +38,7 @@ create(cliente: Cliente): Observable<Cliente>{
 //método para atualizar os dados do produto
   update(cliente: Cliente): Observable<Cliente>{
     const url = `${this.baseUrl}/${cliente.cliId}`
-    return this.http.delete<Cliente>(url)
+    return this.http.put<Cliente>(url,cliente)
   }
 //método para deletar os dados do produto
   delete(cliId: number): Observable<Cliente>{

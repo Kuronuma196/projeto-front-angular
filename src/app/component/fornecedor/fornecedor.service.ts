@@ -35,9 +35,9 @@ export class fornecedorService {
     return this.http.get<Fornecedor>(url)
   }
 
-  update(Fornecedor: Fornecedor): Observable<Fornecedor>{
-    const url = `${this.baseUrl}/${Fornecedor.forId}`
-    return this.http.delete<Fornecedor>(url)
+  update(fornecedor: Fornecedor): Observable<Fornecedor>{
+    const url = `${this.baseUrl}/${fornecedor.forId}`
+    return this.http.put<Fornecedor>(url,fornecedor)
   }
 
   delete(id: number): Observable<Fornecedor>{
