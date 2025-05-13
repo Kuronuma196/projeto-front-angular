@@ -10,6 +10,30 @@
         <mat-form-field>
             <input matInput placeholder="Preço de Venda (R$)" [(ngModel)]="product.proPrecoVenda" name="proPrecoVenda">
         </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="product.quantidadeEstoque" name="quantidadeEstoque">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Categoria" [(ngModel)]="product.categoria" name="categoria">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Código de Barras" [(ngModel)]="product.codigoBarras" name="codigoBarras">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Marca" [(ngModel)]="product.marca" name="marca">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Unidade de Medida" [(ngModel)]="product.unidadeMedida" name="unidadeMedida">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Ativo" [(ngModel)]="product.ativo" name="ativo">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data de Cadastro" [(ngModel)]="product.dataCadastro" name="dataCadastro">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data de Atualização" [(ngModel)]="product.dataAtualizacao" name="dataAtualizacao">
+        </mat-form-field>
     </form>
 
     <button mat-raised-button (click)="updateProduct()" color="primary">

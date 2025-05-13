@@ -2,12 +2,39 @@
     font-size: 3rem;
     font-weight: 300;
     line-height: 1.2;
+    padding-left: 15px;
+
+    
+
 }
 .home {
     background: linear-gradient(to right, #030e2b, #66a6ff); /* Exemplo: azul claro para azul médio */
-
+}
+.home2 {
+    background: linear-gradient(to right, #030e2b, #66a6ff); /* Exemplo: azul claro para azul médio */
+    padding: 24px;
+    margin-bottom: 24px; /* espaço entre os dois cards */
+    padding: 16px;
+    text-align: center;
+    margin-top: 32px; /* aumenta o espaço acima do segundo card */
 }
 
 .home .subtitle{
     font-size: 1.1rem;
+    padding-left: 15px;
+    font-size: 16px;
+
 }
+
+.image-container {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .imagem-grande {
+    width: 100%;
+    max-width: 1500px; /* aumenta o limite de largura */
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }

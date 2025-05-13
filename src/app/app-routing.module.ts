@@ -44,11 +44,11 @@ const routes: Routes = [
   component:PagamentoCreateComponent
 },
 {
-  path: "formaPagamento/update/:id",
+  path: "formaPagamento/update/:fpgId",
   component: PagamentoUpdateComponent
 },
 {
-  path: "formaPagamento/delete/:id",
+  path: "formaPagamento/delete/:fpgId",
   component: PagamentoDeleteComponent
 },
 {

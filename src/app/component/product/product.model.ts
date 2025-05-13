@@ -3,4 +3,12 @@ export interface Product{
     proNome: string
     proPrecoCusto: number
     proPrecoVenda: number
+    quantidadeEstoque: number
+    categoria: String
+    codigoBarras: String
+    marca:String
+    unidadeMedida:String
+    ativo:String
+    dataCadastro:String
+    dataAtualizacao:String
 }

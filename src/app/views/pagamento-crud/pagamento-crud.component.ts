@@ -13,7 +13,7 @@ export class PagamentoCrudComponent implements OnInit {
   }
 
   navigateToPagamentoCreate(): void{
-    this.router.navigate(['/formaPagamento/create'])
+    this.router.navigate(['formaPagamento/create'])
   }
 
 }
