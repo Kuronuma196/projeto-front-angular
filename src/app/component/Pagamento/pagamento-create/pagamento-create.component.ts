@@ -13,7 +13,11 @@ export class PagamentoCreateComponent implements OnInit{
   pagamento: Pagamento = {
     fpgNome: '',
     fpgPrice: 0,
-    fpgDescricao: ''
+    fpgDescricao: '',
+    ativo: '',
+    permiteParcelamento: '',
+    numeroMaximoParcelas: 0,
+    taxaAdicional: ''
   }
 
   //importando productService

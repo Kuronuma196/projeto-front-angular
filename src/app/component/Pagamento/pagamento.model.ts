@@ -3,4 +3,8 @@ export interface Pagamento{
     fpgNome: string
     fpgPrice: number
     fpgDescricao: string
+    ativo: string
+    permiteParcelamento: string
+    numeroMaximoParcelas: number
+    taxaAdicional: string
 }

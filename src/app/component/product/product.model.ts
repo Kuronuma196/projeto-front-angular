@@ -4,11 +4,11 @@ export interface Product{
     proPrecoCusto: number
     proPrecoVenda: number
     quantidadeEstoque: number
-    categoria: String
-    codigoBarras: String
-    marca:String
-    unidadeMedida:String
-    ativo:String
-    dataCadastro:String
-    dataAtualizacao:String
+    categoria: string
+    codigoBarras: string
+    marca:string
+    unidadeMedida:string
+    ativo:string
+    dataCadastro:string
+    dataAtualizacao:string
 }

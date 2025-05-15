@@ -10,6 +10,18 @@
         <mat-form-field>
             <input matInput placeholder="Descrição" [(ngModel)]="pagamento.fpgDescricao" name="fpgDescricao">
         </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Status Ativo" [(ngModel)]="pagamento.ativo" name="ativo">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Está Permitido Parcelamento" [(ngModel)]="pagamento.permiteParcelamento" name="permiteParcelamento">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Número Máximo Parcelas" [(ngModel)]="pagamento.numeroMaximoParcelas" name="numeroMaximoParcelas">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Taxa Adicional" [(ngModel)]="pagamento.taxaAdicional" name="taxaAdicional">
+        </mat-form-field>
     </form>
 
     <button mat-raised-button (click)="createPagamento()" color="primary">
