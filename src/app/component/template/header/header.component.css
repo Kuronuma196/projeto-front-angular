@@ -1,32 +1,64 @@
-
 .header {
     display: flex;
+    justify-content: space-between; /* Espaço entre os grupos */
     align-items: center;
-    background: linear-gradient(to right, #030e2b, #66a6ff); /* Exemplo: azul claro para azul médio */
+    background: linear-gradient(to right, #030e2b, #66a6ff);
+    padding: 0 20px;
+    height: 64px; /* Altura padrão para uma toolbar */
 }
 
-
+/* Todos os links no header */
 .header a {
     display: flex;
     align-items: center;
     text-decoration: none;
+    color: white;
 }
 
+/* Imagem do logo padrão */
 .header .logo {
-    max-height: 35px;
-}
-.header .title-group2{
-    padding-left: 25px;
-}
-.header .title-group{
-    padding-left: 55px;
+    max-height: 40px;
+    height: auto;
+    width: auto;
 }
 
+/* Grupo da esquerda */
+.header .title-group2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Grupo central */
+.header .title-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 20px;
+}
+
+/* Ícone do grupo central */
 .header .title-group i {
-    padding-right: 5px;
-
-    
+    margin-right: 5px;
 }
-p{
+
+/* Grupo da direita */
+.header .title-group3 {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Ajuste visual opcional para imagem da direita */
+.header .title-group3 .logo {
+    padding-bottom: 42px;
+    max-height: 370px;
+    height: 370px;
+    width: 800px;
+    /*color-interpolation-filters: rgba(4, 0, 255, 0.2);*/
+}
+
+/* Estilo genérico para parágrafos */
+p {
     color: pink;
 }
