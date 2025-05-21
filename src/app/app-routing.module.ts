@@ -13,6 +13,10 @@ import { ClienteCreateComponent } from './component/cliente/cliente-create/clien
 import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
 import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
 import { FornecedorCreateComponent } from './component/fornecedor/fornecedor-create/fornecedor-create.component';
+import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
+import { ClienteUpdateComponent } from './component/cliente/cliente-update/cliente-update.component';
+import { FornecedorDeleteComponent } from './component/fornecedor/fornecedor-delete/fornecedor-delete.component';
+import { FornecedorUpdateComponent } from './component/fornecedor/fornecedor-update/fornecedor-update.component';
 
 const routes: Routes = [
 {
@@ -60,12 +64,28 @@ const routes: Routes = [
   component:ClienteCreateComponent
 },
 {
+  path: "clientes/update/:cliId",
+  component:ClienteUpdateComponent
+},
+{
+  path: "clientes/delete/:cliId",
+  component:ClienteDeleteComponent
+},
+{
   path: "fornecedores",
   component:FornecedorCrudComponent
 },
 {
   path: "fornecedores/create",
   component:FornecedorCreateComponent
+},
+{
+  path: "fornecedores/delete/:forId",
+  component:FornecedorUpdateComponent
+},
+{
+  path: "fornecedores/delete/:forId",
+  component:FornecedorDeleteComponent
 },
 
 

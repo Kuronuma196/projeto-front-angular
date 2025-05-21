@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './pagamento-create.component.html',
   styleUrls: ['./pagamento-create.component.css']
 })
-export class PagamentoCreateComponent implements OnInit{
+export class PagamentoCreateComponent {
 
   pagamento: Pagamento = {
     fpgNome: '',

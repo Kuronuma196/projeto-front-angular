@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PagamentoService {
 
-  baseUrl = "http://localhost:3001/pagamento"
+  baseUrl = "http://localhost:8080/formaPagamento"
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient ) { }
 

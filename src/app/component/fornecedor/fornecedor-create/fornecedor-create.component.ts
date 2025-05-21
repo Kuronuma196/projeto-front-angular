@@ -32,6 +32,6 @@ export class FornecedorCreateComponent implements OnInit{
   }
 
   cancel(): void {
-    this.router.navigate(['/products'])
+    this.router.navigate(['/fornecedores'])
   }  
 }
