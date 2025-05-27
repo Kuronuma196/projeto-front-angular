@@ -1,13 +1,79 @@
-table{
+/* Tabela com bordas arredondadas e efeito LED */
+.mat-elevation-z4{
+    background: rgba(175, 144, 248, 0.5);
+    border-radius: 15px;
+}
+
+table {
     width: 100%;
-    background-color:  #030e2b;
-
-}
-
-.edit > i{
+    background: linear-gradient(to bottom, rgb(37, 34, 53), #0f1118);
+    border-radius: 20px;
+    border: 2px solid #420ed1;
+    box-shadow: 0 0 2px #420ed1, 0 0 4px #420ed1 inset; /* LED mais sutil */
+    transition: box-shadow 0.3s ease;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  table:hover {
+    /* Nenhum transform (sem flutuar) */
+    box-shadow: 0 0 3px #420ed1, 0 0 5px #420ed1 inset;
+  }
+  
+  table::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #420ed1, #0088ff, #420ed1);
+    z-index: -1;
+    filter: blur(3px);     /* menos blur */
+    opacity: 0.2;          /* LED ainda mais suave */
+    transition: opacity 0.3s ease, filter 0.3s ease;
+  }
+  
+  table:hover::before {
+    opacity: 0.3;
+    filter: blur(4px);
+  }
+  /* Ícones de editar com efeito LED e bordas quadradas */
+  .edit > i {
     color: #d9cd26;
-}
-
-.delete > i{
+    padding: 8px;
+    background-color: rgba(217, 205, 38, 0.1);
+    border: 2px solid #d9cd26;
+    box-shadow: 0 0 4px #d9cd26, 0 0 6px #d9cd26 inset;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 6px;
+  }
+  
+  .edit > i:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px #d9cd26, 0 0 12px #d9cd26 inset;
+  }
+  
+  /* Ícones de deletar com efeito LED e bordas quadradas */
+  .delete > i {
     color: #e35e6b;
-}
+    padding: 8px;
+    background-color: rgba(227, 94, 107, 0.1);
+    border: 2px solid #e35e6b;
+    box-shadow: 0 0 4px #e35e6b, 0 0 6px #e35e6b inset;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 6px;
+  }
+  
+  .delete > i:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px #e35e6b, 0 0 12px #e35e6b inset;
+  }
+  

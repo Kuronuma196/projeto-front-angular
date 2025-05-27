@@ -1,3 +1,39 @@
-button{
+button {
     margin-bottom: 30px;
-}
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background: linear-gradient(to bottom, rgb(37, 34, 53), #0f1118);
+    padding: 15px 30px;
+    border: 2px solid #420ed1;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 4px #420ed1, 0 0 6px #420ed1 inset; /* brilho reduzido */
+    position: relative;
+  }
+  
+  button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 8px #420ed1, 0 0 12px #420ed1 inset; /* brilho no hover suavizado */
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #420ed1, #4405f1, #420ed1);
+    z-index: -1;
+    filter: blur(4px); /* blur mais sutil */
+    opacity: 0.3;       /* menos opaco */
+    transition: 0.3s ease;
+  }
+  
+  button:hover::before {
+    opacity: 0.5;
+    filter: blur(6px); /* leve aumento no hover */
+  }
+  
