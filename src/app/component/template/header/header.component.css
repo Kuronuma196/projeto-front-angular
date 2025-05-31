@@ -62,3 +62,22 @@
 p {
     color: pink;
 }
+/* Efeito de brilho suave (hover) */
+.header .title-group2 .logo {
+    max-height: 40px;
+    height: auto;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.header .title-group2 .logo:hover {
+    filter: drop-shadow(0 0 6px #00faff); /* Brilho LED azul suave */
+    transform: scale(1.05); /* Leve zoom ao passar o mouse */
+}
+
+/* Flutuação leve ao clicar */
+.header .title-group2 a:active .logo {
+    transform: translateY(-3px) scale(1.08);
+    filter: drop-shadow(0 0 12px #00faff);
+    transition: transform 0.1s ease, filter 0.1s ease;
+}
