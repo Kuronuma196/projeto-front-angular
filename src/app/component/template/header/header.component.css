@@ -1,13 +1,29 @@
+/* Barra de navegação */
 .header {
     display: flex;
-    justify-content: space-between; /* Espaço entre os grupos */
+    justify-content: space-between;
     align-items: center;
     background: linear-gradient(to right, #030e2b, #66a6ff);
     padding: 0 20px;
-    height: 64px; /* Altura padrão para uma toolbar */
+    height: 64px;
+}
+/* Efeito LED branco ainda mais fraco ao passar o mouse no grupo central */
+.header .title-group a:hover {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.15))
+            drop-shadow(0 0 4px rgba(255, 255, 255, 0.1));
+    transform: translateY(-1px) scale(1.01);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Todos os links no header */
+/* Efeito ao clicar */
+.header .title-group a:active {
+    transform: translateY(-2px) scale(1.02);
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.2));
+    transition: transform 0.1s ease, filter 0.1s ease;
+}
+
+
+/* Links na barra */
 .header a {
     display: flex;
     align-items: center;
@@ -15,11 +31,12 @@
     color: white;
 }
 
-/* Imagem do logo padrão */
+/* Logo padrão */
 .header .logo {
     max-height: 40px;
     height: auto;
     width: auto;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Grupo da esquerda */
@@ -49,35 +66,29 @@
     margin-left: auto;
 }
 
-/* Ajuste visual opcional para imagem da direita */
+/* Logo grande à direita */
 .header .title-group3 .logo {
     padding-bottom: 42px;
     max-height: 370px;
     height: 370px;
     width: 800px;
-    /*color-interpolation-filters: rgba(4, 0, 255, 0.2);*/
+}
+
+/* Efeito LED suave ao passar o mouse */
+.header .title-group2 .logo:hover {
+    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.4))
+            drop-shadow(0 0 10px rgba(0, 255, 255, 0.2));
+    transform: scale(1.03);
+}
+
+/* Efeito de flutuação e brilho ao clicar */
+.header .title-group2 a:active .logo {
+    transform: translateY(-2px) scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.4));
+    transition: transform 0.1s ease, filter 0.1s ease;
 }
 
 /* Estilo genérico para parágrafos */
 p {
     color: pink;
-}
-/* Efeito de brilho suave (hover) */
-.header .title-group2 .logo {
-    max-height: 40px;
-    height: auto;
-    width: auto;
-    transition: all 0.3s ease;
-}
-
-.header .title-group2 .logo:hover {
-    filter: drop-shadow(0 0 6px #00faff); /* Brilho LED azul suave */
-    transform: scale(1.05); /* Leve zoom ao passar o mouse */
-}
-
-/* Flutuação leve ao clicar */
-.header .title-group2 a:active .logo {
-    transform: translateY(-3px) scale(1.08);
-    filter: drop-shadow(0 0 12px #00faff);
-    transition: transform 0.1s ease, filter 0.1s ease;
 }
