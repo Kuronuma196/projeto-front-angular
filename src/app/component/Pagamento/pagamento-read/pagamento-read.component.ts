@@ -9,7 +9,7 @@ import { PagamentoService } from '../pagamento.service';
 })
 export class PagamentoReadComponent {
   pagamento!: Pagamento[]
-  displayedColumns = [ 'fpgId', 'fpgNome', 'fpgPrice', 'fpgDescricao', 'ativo', 'permiteParcelamento', 'numeroMaximoParcelas', 'taxaAdicional']
+  displayedColumns = [ 'fpgId', 'fpgNome', 'fpgPrice', 'fpgDescricao', 'ativo', 'permiteParcelamento', 'numeroMaximoParcelas', 'taxaAdicional', 'action']
 
   constructor(private pagamentoService: PagamentoService) { }
 
