@@ -1,5 +1,7 @@
 <mat-card class="fundo1">
+    <div style="display:flex; justify-content:flex-end">
     <mat-card-title>Novo Produto</mat-card-title>
+    </div>
     <form>
         <mat-form-field appearance="fill">
             <input matInput placeholder="Nome" [(ngModel)]="product.proNome" name="name">
@@ -40,6 +42,7 @@
         </mat-form-field>
     </form>
 
+    <div style="gap: 10px;">
     <button mat-raised-button (click)="createProduct()" color="primary">
         Salvar
     </button>
@@ -47,5 +50,6 @@
     <button mat-raised-button (click)="cancel()">
         Cancelar
     </button>
+</div>
 
 </mat-card>

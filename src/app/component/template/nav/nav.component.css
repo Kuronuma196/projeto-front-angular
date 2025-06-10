@@ -1,67 +1,38 @@
-/*.sidenav{
-    background-color: #3F51B5;
-    width: 200px;
-} */
+.container {
+  height: 100vh;
+}
+
 .sidenav {
-    background: linear-gradient(to bottom, #3F51B5, #2e3b86, #1e2a6e); 
-    width: 200px;
+  background: linear-gradient(to bottom, #3F51B5, #2e3b86, #1e2a6e);
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-list a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .anima {
-  color: rgb(255, 255, 255);
-  transition: color 0.1s ease;
+  color: white;
+  transition: color 0.2s ease;
 }
 
 .anima:hover {
-  color: rgb(0, 0, 0);
+  color: black;
 }
 
-
-
-.sidenav a{
-    color: #fff;
+.content {
+  padding: 16px;
+  background-color: #fff;
 }
-.sidenav i{
-    padding-right: 10px;
-}
-
-.content{
-    padding: 16px;
-    background-color: #fff;
-}
-.sidenav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; /* Isso centraliza horizontalmente tudo dentro */
-    height: 100vh; /* Garante altura total da tela 
-    padding-bottom: 10px;*/
-  }
-  
-  .sidenav-footer {
-    text-align: center;
-   /* width: 100%;  Opcional, ajuda em alguns layouts */
-  }
-  
-  .sidenav-footer img {
-    max-width: 190px;
-    height: auto;
-   /* opacity: 0.7;*/
-  }
-  
-
-/*.imagem-grande {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-
-  
-.image-container {
-    text-align: center;
-    margin-bottom: 16px;
-  }
-  */
-  

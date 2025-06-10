@@ -1,14 +1,21 @@
-.footer{
-    /*posição fixa*/
+
+.footer {
     position: fixed;
-    /*coloca toolbar na parte de baixa */
     bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
     display: flex;
-    /*coloca no final da linha. sendo no lado direiro parte inferior*/
-    justify-content: flex-end;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    align-items: center;
+    background-color: #3F51B5; /* Cor de fundo opcional */
+    color: white; /* Cor do texto */
+    padding: 8px 20px; /* Espaçamento interno */
+    height: 48px; /* Altura padrão de uma toolbar */
+    z-index: 1000; /* Garante que fique por cima de outros elementos */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* Sombra sutil para destaque */
 }
 
-.footer > span{
+.footer > span {
     font-size: 1.1rem;
     font-weight: 300;
 }

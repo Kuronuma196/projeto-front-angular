@@ -1,35 +1,30 @@
 <mat-sidenav-container class="container">
-    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+  <mat-sidenav #sidenav class="sidenav" mode="side" [opened]="menuAberto" fixedInViewport="true" fixedTopGap="64">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>
+        <span class="anima">      Home</span>
+      </a>
+      <a mat-list-item routerLink="/clientes">
+        <i class="material-icons">groups</i>
+        <span class="anima">      Clientes</span>
+      </a>
+      <a mat-list-item routerLink="/products">
+        <i class="material-icons">storefront</i>
+        <span class="anima">      Produtos</span>
+      </a>
+      <a mat-list-item routerLink="/fornecedores">
+        <i class="material-icons">folder_shared</i>
+        <span class="anima">      Fornecedor</span>
+      </a>
+      <a mat-list-item routerLink="/formaPagamento">
+        <i class="material-icons">list_alt</i>
+        <span class="anima">      Pagamentos</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
 
-        <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="/">
-              <i class="material-icons">home</i>
-              <span class="anima">Home</span>
-            </a>
-            <a mat-list-item routerLink="/clientes">
-              <i class="material-icons">groups</i>
-              <span class="anima">Clientes</span>
-            </a>
-            <a mat-list-item routerLink="/products">
-              <i class="material-icons">storefront</i>
-              <span class="anima">Produtos</span>
-            </a>
-            <a mat-list-item routerLink="/fornecedores">
-              <i class="material-icons">folder_shared</i>
-              <span class="anima">Fornecedor</span>
-            </a>
-            <a mat-list-item routerLink="/formaPagamento">
-              <i class="material-icons">list_alt</i>
-              <span class="anima">Pagamentos</span>
-            </a>
-          </mat-nav-list>
-       <!--  <div class="sidenav-footer">
-        <img src="assets\img\lovekake.png" alt="Rodapé decorativo" class="footer-image">
-    </div> -->
-
-    </mat-sidenav>
-    <mat-sidenav-content class="content">
-        <!-- usamos para começar a trabalhar com a navegação a partir do clique... -->
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>
