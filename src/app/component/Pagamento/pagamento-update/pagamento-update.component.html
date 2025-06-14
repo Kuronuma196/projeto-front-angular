@@ -1,5 +1,12 @@
-<mat-card>
-    <mat-card-title>Alterar Pagamento</mat-card-title>
+<header class="cabecalho-branco"></header>
+
+<main class="conteudo">
+  <!-- Conteúdo da página -->
+</main>
+<mat-card class="fundo1">
+    
+    <div style="display:flex; justify-content:flex-inicial"></div>
+    <mat-card-title class="Nome">Alterar Pagamento</mat-card-title>
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome" [(ngModel)]="pagamento.fpgNome" name="fpgNome">
@@ -24,7 +31,7 @@
         </mat-form-field>
     </form>
 
-    <div style="gap: 10px;">
+    <div style="gap: 10px; display:flex; justify-content:flex-end">
     <button mat-raised-button (click)="updatePagamento()" color="primary">
         Atualizar
     </button>

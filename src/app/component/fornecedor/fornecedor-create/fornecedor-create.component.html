@@ -1,5 +1,12 @@
+<header class="cabecalho-branco"></header>
+
+<main class="conteudo">
+  <!-- Conteúdo da página -->
+</main>
 <mat-card class="fundo1">
-    <mat-card-title>Novo Fornecedor</mat-card-title>
+    <div style="display:flex; justify-content:flex-inicial">
+    <mat-card-title class="Nome">Novo Fornecedor</mat-card-title>
+</div>
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome" [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia">
@@ -12,7 +19,7 @@
         </mat-form-field>
     </form>
 
-    <div style="gap: 10px;">
+    <div style="gap: 10px; display:flex; justify-content:flex-end">
     <button mat-raised-button (click)="createFornecedor()" color="primary">
         Salvar
     </button>

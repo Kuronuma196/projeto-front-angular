@@ -1,12 +1,20 @@
-/* Barra de navegação */
+/* Barra de navegação fixa */
 .header {
+    position: fixed; /* Fixa no topo da tela */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Garante que fique acima dos outros elementos */
+    width: 100%;
+    height: 64px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(to right, #030e2b, #66a6ff);
     padding: 0 20px;
-    height: 64px;
 }
+
 /* Efeito LED branco ainda mais fraco ao passar o mouse no grupo central */
 .header .title-group a:hover {
     filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.15))
@@ -21,7 +29,6 @@
     filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.2));
     transition: transform 0.1s ease, filter 0.1s ease;
 }
-
 
 /* Links na barra */
 .header a {
@@ -91,4 +98,11 @@
 /* Estilo genérico para parágrafos */
 p {
     color: pink;
+}
+
+/* Ajuste no conteúdo abaixo da header fixa */
+.content {
+    padding: 16px;
+    background-color: #fff;
+    margin-top: 64px; /* Compensa a altura do header fixo */
 }

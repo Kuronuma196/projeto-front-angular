@@ -1,5 +1,12 @@
 <mat-card class="fundo1">
-    <mat-card-title>Excluir Pagamento</mat-card-title>
+    <div style="display:flex; justify-content:flex-inicial">
+    <mat-card-title class="Nome">Excluir Pagamento</mat-card-title>
+</div>
+<header class="cabecalho-branco"></header>
+
+<main class="conteudo">
+  <!-- Conteúdo da página -->
+</main>
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome" [value]="pagamento.fpgNome" name="fpgNome" disabled>
@@ -24,7 +31,7 @@
         </mat-form-field>
     </form>
 
-    <div style="gap: 10px;">
+    <div style="gap: 10px;  display:flex; justify-content:flex-end">
     <button mat-raised-button (click)="deletePagamento()" color="warn">
         Excluir
     </button>

@@ -36,3 +36,48 @@
   padding: 16px;
   background-color: #fff;
 }
+.container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 60px;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+}
+
+.sidenav.expandido {
+  width: 240px;
+}
+
+mat-nav-list {
+  padding: 0;
+}
+
+mat-list-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  color: #333;
+}
+
+.material-icons {
+  margin-right: 16px;
+  font-size: 24px;
+  width: 24px;
+  text-align: center;
+}
+
+.anima {
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  width: 0;
+  transition: all 0.3s ease;
+}
+
+/* Quando o menu está expandido, mostrar texto */
+.sidenav.expandido .anima {
+  opacity: 1;
+  width: auto;
+}

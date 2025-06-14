@@ -1,3 +1,19 @@
+
+.cabecalho-branco {
+  height: 64px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo {
+  margin-top: 64px; /* mesma altura do cabeçalho */
+  padding: 16px;
+}
 /* Tabela com bordas arredondadas e efeito LED */
 .mat-elevation-z4{
     background: rgba(175, 144, 248, 0.5);

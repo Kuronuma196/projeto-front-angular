@@ -1,3 +1,18 @@
+.cabecalho-branco {
+  height: 64px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo {
+  margin-top: 64px; /* mesma altura do cabeçalho */
+  padding: 16px;
+}
 .fundo1 {
     background: linear-gradient(to bottom, rgb(26, 25, 34), #0f1118);
     padding: 20px;
@@ -21,6 +36,178 @@ button {
     background: linear-gradient(to left, #3a3841, #38383b);
 }
 
+.fundo1 {
+    background: linear-gradient(to bottom, rgb(26, 25, 34), #0f1118);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+mat-form-field.appearance-fill .mat-form-field-flex {
+  padding-bottom: 23 px;
+  /*border-radius: 12px !important;
+  background-color: rgba(255, 255, 255, 0.05);  opcional, ajusta o fundo interno */
+}
+
+mat-form-field {
+  padding-bottom: 23 px;
+  /*border-radius: 12px !important;
+  overflow: hidden;  Garante que o radius funcione bem com o conteúdo interno */
+}
+
+
+/* Layout em grade com 3 colunas para os campos */
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.fundo1 {
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(37, 34, 53), #0f1118);
+    border-radius: 20px;
+    border: 2px solid #420ed1;
+    box-shadow: 0 0 2px #420ed1, 0 0 4px #420ed1 inset; /* LED mais sutil */
+    transition: box-shadow 0.3s ease;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .fundo1:hover {
+    /* Nenhum transform (sem flutuar) */
+    box-shadow: 0 0 3px #420ed1, 0 0 5px #420ed1 inset;
+  }
+  
+  .fundo1::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #420ed1, #0088ff, #420ed1);
+    z-index: -1;
+    filter: blur(3px);     /* menos blur */
+    opacity: 0.2;          /* LED ainda mais suave */
+    transition: opacity 0.3s ease, filter 0.3s ease;
+  }
+  
+  .fundo1:hover::before {
+    opacity: 0.3;
+    filter: blur(4px);
+  }
+
+  .Nome {
+    margin: 20px 15px 0px 0px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    background: linear-gradient(to left, #3a3841, #38383b);
+}
+
+/* Linha de botões separada */
+.Nome-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    grid-column: span 3; /* Faz os botões ocuparem toda a largura do grid */
+}
+.Nome {
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background: linear-gradient(to bottom, rgb(37, 34, 53), #0f1118);
+    padding: 15px 30px;
+    border: 2px solid #420ed1;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 4px #420ed1, 0 0 6px #420ed1 inset; /* brilho reduzido */
+    position: relative;
+  }
+  
+  .Npme:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 8px #420ed1, 0 0 12px #420ed1 inset; /* brilho no hover suavizado */
+  }
+  
+  .Nome::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #420ed1, #4405f1, #420ed1);
+    z-index: -1;
+    filter: blur(4px); /* blur mais sutil */
+    opacity: 0.3;       /* menos opaco */
+    transition: 0.3s ease;
+  }
+  
+  .Nome:hover::before {
+    opacity: 0.5;
+    filter: blur(6px); /* leve aumento no hover */
+  }
+
+/* Estilização dos botões */
+button {
+    margin: 20px 15px 0px 0px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    background: linear-gradient(to left, #3a3841, #38383b);
+}
+
+/* Linha de botões separada */
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    grid-column: span 3; /* Faz os botões ocuparem toda a largura do grid */
+}
+button {
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background: linear-gradient(to bottom, rgb(37, 34, 53), #0f1118);
+    padding: 15px 30px;
+    border: 2px solid #420ed1;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 4px #420ed1, 0 0 6px #420ed1 inset; /* brilho reduzido */
+    position: relative;
+  }
+  
+  button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 8px #420ed1, 0 0 12px #420ed1 inset; /* brilho no hover suavizado */
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #420ed1, #4405f1, #420ed1);
+    z-index: -1;
+    filter: blur(4px); /* blur mais sutil */
+    opacity: 0.3;       /* menos opaco */
+    transition: 0.3s ease;
+  }
+  
+  button:hover::before {
+    opacity: 0.5;
+    filter: blur(6px); /* leve aumento no hover */
+  }
+  
 /* Linha de botões separada */
 .button-row {
     display: flex;

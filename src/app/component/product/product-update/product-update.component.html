@@ -1,5 +1,12 @@
+<header class="cabecalho-branco"></header>
+
+<main class="conteudo">
+  <!-- Conteúdo da página -->
+</main>
 <mat-card class="fundo1">
-    <mat-card-title>Alterar Produto</mat-card-title>
+    <div style="display:flex; justify-content:flex-inicial">
+    <mat-card-title class="Nome">Alterar Produto</mat-card-title>
+</div>
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome" [(ngModel)]="product.proNome" name="proNome">
@@ -36,7 +43,7 @@
         </mat-form-field>
     </form>
 
-    <div style="gap: 10px;">
+    <div style="gap: 10px; display:flex; justify-content:flex-end">
     <button mat-raised-button (click)="updateProduct()" color="primary">
         Atualizar
     </button>
