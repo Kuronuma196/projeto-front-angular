@@ -8,7 +8,7 @@ export interface Product{
     codigoBarras: string
     marca:string
     unidadeMedida:string
-    ativo:string
+    ativo:boolean 
     dataCadastro:string
     dataAtualizacao:string
 }

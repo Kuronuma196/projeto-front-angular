@@ -39,6 +39,9 @@ import { PagamentoDeleteComponent } from './component/Pagamento/pagamento-delete
 import { ClienteCreateComponent } from './component/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './component/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
+import { MatSelectModule } from '@angular/material/select';
+import { AppInicialComponent } from './views/app-inicial/app-inicial.component';
+
 
 
 
@@ -69,8 +72,10 @@ import { ClienteDeleteComponent } from './component/cliente/cliente-delete/clien
     ClienteCreateComponent,
     ClienteUpdateComponent,
     ClienteDeleteComponent,
+    AppInicialComponent,
   ],
   imports: [
+    MatSelectModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

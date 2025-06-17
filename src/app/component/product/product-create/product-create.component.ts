@@ -3,6 +3,7 @@ import { Product } from '../product.model';
 import { ProductService } from '../product.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-product-create',
   templateUrl: './product-create.component.html',
@@ -19,7 +20,7 @@ export class ProductCreateComponent implements OnInit{
     codigoBarras: '',
     marca:'',
     unidadeMedida:'',
-    ativo:'',
+    ativo: true,
     dataCadastro:'',
     dataAtualizacao:'',
   }

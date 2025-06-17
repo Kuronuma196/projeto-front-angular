@@ -17,9 +17,15 @@
         <mat-form-field>
             <input matInput placeholder="Descrição" [(ngModel)]="pagamento.fpgDescricao" name="fpgDescricao">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Status Ativo" [(ngModel)]="pagamento.ativo" name="ativo">
-        </mat-form-field>
+
+ <mat-form-field>
+        <mat-label>Pagamento Ativo?</mat-label>
+        <mat-select [(ngModel)]="pagamento.ativo" name="ativo" required>
+            <mat-option [value]="true">Ativo</mat-option>
+            <mat-option [value]="false">Inativo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
         <mat-form-field>
             <input matInput placeholder="Está Permitido Parcelamento" [(ngModel)]="pagamento.permiteParcelamento" name="permiteParcelamento">
         </mat-form-field>
