@@ -1,85 +1,92 @@
-<header class="cabecalho-branco"></header>
-
-<main class="conteudo">
-  <!-- Conteúdo da página -->
-</main>
 
 
-  <!-- Cabeçalho branco superior -->
-  <header class="top-bar">
-    <div class="top-links">
-      <span>Sistema Fiep :</span>
-      <a href="#">FIEP</a> |
-      <a href="#">SESI</a> |
-      <a href="#">SENAI</a> |
-      <a href="#">IEL</a>
-    </div>
-    <nav class="top-nav">
-      <a href="#">Imprensa</a> |
-      <a href="#">Compras</a> |
-      <a href="#">Carreira</a> |
-      <a href="#">SAC</a> |
-      <a href="#">Ouvidoria</a> |
-      <a href="#">Fale com o Presidente</a>
-    </nav>
-  </header>
+  <header class="cabecalho-branco"></header>
 
-  <!-- Menu principal azul -->
-  <nav class="main-menu">
-    <div class="logo">Sistema Fiep</div>
-    <ul>
-      <li><a href="#">Áreas de Atuação</a></li>
-      <li><a href="#">O Sistema Fiep</a></li>
-      <li><a href="#">Publicações</a></li>
-      <li><a href="#">Notícias</a></li>
-    </ul>
-    <div class="right-menu">
-      <span class="material-icons">search</span>
-      <button class="btn-atendimento">Atendimento</button>
-    </div>
-  </nav>
-
-  <!-- Conteúdo da Página -->
-  <main>
-    <h1>Bem-vindo ao site</h1>
-    <p>Conteúdo da página aqui...</p>
+  <main class="conteudo">
+    <!-- Conteúdo da página -->
   </main>
-
-  <!-- Rodapé -->
-  <footer class="footer">
+  <header class="fiep-header">
+    <div class="top-bar">
+      <span>Sistema Fiep</span>
+      <nav class="institucional-links">
+        <a href="#">FIEP</a><span>•</span>
+        <a href="#">SESI</a><span>•</span>
+        <a href="#">SENAI</a><span>•</span>
+        <a href="#">IEL</a>
+      </nav>
+      <nav class="extra-links">
+        <a href="#">Imprensa</a>
+        <a href="#">Compras</a>
+        <a href="#">Carreira</a>
+        <a href="#">SAC</a>
+        <a href="#">Ouvidoria</a>
+        <a href="#">Fale com o Presidente</a>
+      </nav>
+    </div>
+    <div class="main-nav">
+      <div class="logo-area">
+        <img src="assets/img/logoSenai.png" alt="Logo Senai" />
+        <span>Sistema Fiep</span>
+      </div>
+      <nav class="main-menu">
+        <a href="#">Áreas de Atuação</a>
+        <a href="#">O Sistema Fiep</a>
+        <a href="#">Publicações</a>
+        <a href="#">Notícias</a>
+      </nav>
+      <div class="header-actions">
+        <input type="text" placeholder="Pesquisar..." />
+        <button>Atendimento</button>
+      </div>
+    </div>
+  </header>
+  
+  <footer class="fiep-footer">
     <div class="footer-columns">
       <div>
         <h4>Áreas de Atuação</h4>
-        <ul>
-          <li>Educação</li>
-          <li>Gestão Sustentável</li>
-          <li>Internacionalização</li>
-        </ul>
+        <a href="#">Educação</a>
+        <a href="#">Gestão Sustentável</a>
+        <a href="#">Internacionalização</a>
+        <a href="#">Representatividade</a>
+        <a href="#">Segurança e Saúde</a>
+        <a href="#">Tecnologia e Inovação</a>
       </div>
       <div>
         <h4>O Sistema Fiep</h4>
-        <ul>
-          <li>Código de Conduta</li>
-          <li>Ética e Integridade</li>
-        </ul>
+        <a href="#">Código de Conduta</a>
+        <a href="#">Ética e Integridade</a>
+        <a href="#">Canal de Ética</a>
+        <a href="#">Condições de Contratação</a>
       </div>
       <div>
-        <h4>Publicações</h4>
-        <ul>
-          <li>Agência de Notícias</li>
-        </ul>
+        <h4>Contato</h4>
+        <a href="#">WhatsApp</a>
+        <a href="#">Unidades</a>
       </div>
-      <div>
-        <h4>Atendimento</h4>
-        <ul>
-          <li>WhatsApp</li>
-          <li>Unidades</li>
-        </ul>
+      <div class="qr-highlight">
+        <h4>Notícias da Indústria</h4>
+        <img src="assets/img/qr-code.png" alt="QR Code" />
+        <p>Nosso canal oficial para você saber tudo em primeira mão.</p>
+        <button>Comunidade WhatsApp</button>
       </div>
     </div>
-
     <div class="footer-bottom">
-      <span>Sistema Fiep - Todos os direitos reservados</span>
+      <div class="footer-logo">
+        <img src="assets/img/logoSenai.png" alt="Logo Senai" />
+        <span>Sistema Fiep</span>
+      </div>
+      <nav class="legal-links">
+        <a href="#">Proteção e Privacidade</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Programa de Integridade</a>
+      </nav>
+      <div class="social-icons">
+        <a href="#"><i class="material-icons">facebook</i></a>
+        <a href="#"><i class="material-icons">youtube</i></a>
+        <a href="#"><i class="material-icons">linkedin</i></a>
+      </div>
     </div>
   </footer>
-
+  
+  <script src="app-inicial.component.ts"></script>

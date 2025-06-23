@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-app-inicial',
@@ -6,5 +7,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./app-inicial.component.css']
 })
 export class AppInicialComponent {
+ 
+  showDropdown: 'areas' | 'sistema' | '' = '';
 
+  constructor(private router: Router) {}
+
+  // Controla exibição do dropdown
+  setDropdown(menu: 'areas' | 'sistema' | ''): void {
+    this.showDropdown = menu;
+  }
+
+  // Navega para rota interna do Angular
+  goTo(route: string): void {
+    this.router.navigate([route]);
+  }
+
+  // Abre links externos (como WhatsApp)
+  openExternal(url: string): void {
+    window.open(url, '_blank');
+  }
+
+  // Exemplo para botão de atendimento
+  openAtendimento(): void {
+    this.openExternal('https://wa.me/5541999999999'); // Substitua pelo canal real
+  }
+
+  // Comunidade WhatsApp (QR Code)
+  openWhatsapp(): void {
+    this.openExternal('https://wa.me/5541999999999'); // Substitua pelo canal real
+  }
+  
 }

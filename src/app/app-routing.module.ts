@@ -18,8 +18,13 @@ import { ClienteUpdateComponent } from './component/cliente/cliente-update/clien
 import { FornecedorDeleteComponent } from './component/fornecedor/fornecedor-delete/fornecedor-delete.component';
 import { FornecedorUpdateComponent } from './component/fornecedor/fornecedor-update/fornecedor-update.component';
 
+import { AppInicialComponent } from './views/app-inicial/app-inicial.component';
 
 const routes: Routes = [
+  {
+    path: "inicial",
+    component:AppInicialComponent
+  },
 {
   path: "",
   component:HomeComponent
