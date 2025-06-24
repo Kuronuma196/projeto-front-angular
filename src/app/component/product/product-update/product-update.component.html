@@ -9,16 +9,19 @@
 </div>
     <form>
         <mat-form-field>
+            <input matInput type="number" placeholder="Id do Fornecerdor Pertencente" [(ngModel)]="product.proFornecedor" name="proFornecedor">
+        </mat-form-field>
+        <mat-form-field>
             <input matInput placeholder="Nome" [(ngModel)]="product.proNome" name="proNome">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço de Custo (R$)" [(ngModel)]="product.proPrecoCusto" name="proPrecoCusto">
+            <input matInput type="number" placeholder="Preço de Custo (R$)" [(ngModel)]="product.proPrecoCusto" name="proPrecoCusto">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço de Venda (R$)" [(ngModel)]="product.proPrecoVenda" name="proPrecoVenda">
+            <input matInput type="number" placeholder="Preço de Venda (R$)" [(ngModel)]="product.proPrecoVenda" name="proPrecoVenda">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [(ngModel)]="product.quantidadeEstoque" name="quantidadeEstoque">
+            <input matInput type="number" placeholder="Quantidade de Estoque" [(ngModel)]="product.quantidadeEstoque" name="quantidadeEstoque">
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Categoria" [(ngModel)]="product.categoria" name="categoria">

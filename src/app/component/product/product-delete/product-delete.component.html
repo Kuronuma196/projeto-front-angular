@@ -9,17 +9,22 @@
     <mat-card-title class="Nome">Excluir Produto</mat-card-title>
 </div>
     <form>
+
+        <mat-form-field>
+            <input matInput type="number" placeholder="Id do Fornecedor Pertencente" [value]="product.proFornecedor" name="proFornecedor" disabled>
+        </mat-form-field>
+
         <mat-form-field>
             <input matInput placeholder="Nome" [value]="product.proNome" name="proNome" disabled>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço de custo(R$)" [value]="product.proPrecoCusto" name="proPrecoCusto" disabled>
+            <input matInput type="number" placeholder="Preço de custo(R$)" [value]="product.proPrecoCusto" name="proPrecoCusto" disabled>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço de venda (R$)" [value]="product.proPrecoVenda" name="proPrecoVenda" disabled>
+            <input matInput type="number" placeholder="Preço de venda (R$)" [value]="product.proPrecoVenda" name="proPrecoVenda" disabled>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [(ngModel)]="product.quantidadeEstoque" name="quantidadeEstoque" disabled>
+            <input matInput type="number" placeholder="Quantidade de Estoque" [(ngModel)]="product.quantidadeEstoque" name="quantidadeEstoque" disabled>
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Categoria" [(ngModel)]="product.categoria" name="categoria" disabled>

@@ -8,17 +8,22 @@
     <mat-card-title class="Nome">Novo Produto</mat-card-title>
     </div>
     <form>
+
+        <mat-form-field appearance="fill" >
+            <input matInput type="number" placeholder="Id do Fornecedor Pertencente" [(ngModel)]="product.proFornecedor" name="proFornecedor">
+        </mat-form-field>
+
         <mat-form-field appearance="fill">
             <input matInput placeholder="Nome" [(ngModel)]="product.proNome" name="name">
         </mat-form-field>
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Preço de Custo(R$)" [(ngModel)]="product.proPrecoCusto" name="price">
+            <input matInput type="number" placeholder="Preço de Custo(R$)" [(ngModel)]="product.proPrecoCusto" name="price">
         </mat-form-field>
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Preço de Venda(R$)" [(ngModel)]="product.proPrecoVenda" name="price">
+            <input matInput type="number" placeholder="Preço de Venda(R$)" [(ngModel)]="product.proPrecoVenda" name="price">
         </mat-form-field>
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Quantidaade de Estoque" [(ngModel)]="product.quantidadeEstoque" name="quantidadeEstoque">
+            <input matInput type="number" placeholder="Quantidaade de Estoque" [(ngModel)]="product.quantidadeEstoque" name="quantidadeEstoque">
         </mat-form-field>
         <mat-form-field appearance="fill">
             <input matInput placeholder="Categoria" [(ngModel)]="product.categoria" name="categoria">

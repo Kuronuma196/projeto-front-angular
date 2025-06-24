@@ -12,7 +12,7 @@
             <input matInput placeholder="Nome" [value]="pagamento.fpgNome" name="fpgNome" disabled>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [value]="pagamento.fpgPrice" name="fpgPrice" disabled>
+            <input matInput type="number" placeholder="Preço (R$)" [value]="pagamento.fpgPrice" name="fpgPrice" disabled>
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Descrição" [value]="pagamento.fpgDescricao" name="fpgDescricao" disabled>
@@ -24,7 +24,7 @@
             <input matInput placeholder="Está Permitido Parcelamento" [(ngModel)]="pagamento.permiteParcelamento" name="permiteParcelamento" disabled>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Número Máximo Parcelas" [(ngModel)]="pagamento.numeroMaximoParcelas" name="numeroMaximoParcelas" disabled>
+            <input matInput type="number" placeholder="Número Máximo Parcelas" [(ngModel)]="pagamento.numeroMaximoParcelas" name="numeroMaximoParcelas" disabled>
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Taxa Adicional" [(ngModel)]="pagamento.taxaAdicional" name="taxaAdicional" disabled>

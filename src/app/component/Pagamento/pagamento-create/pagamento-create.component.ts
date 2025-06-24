@@ -12,11 +12,11 @@ export class PagamentoCreateComponent {
 
   pagamento: Pagamento = {
     fpgNome: '',
-    fpgPrice: 0,
+    fpgPrice: null,
     fpgDescricao: '',
     ativo: '',
     permiteParcelamento: '',
-    numeroMaximoParcelas: 0,
+    numeroMaximoParcelas: null,
     taxaAdicional: ''
   }
 

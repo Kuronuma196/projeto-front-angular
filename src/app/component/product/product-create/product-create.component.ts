@@ -13,9 +13,9 @@ export class ProductCreateComponent implements OnInit{
 
   product: Product = {
     proNome: '',
-    proPrecoCusto: 0,
-    proPrecoVenda: 0,
-    quantidadeEstoque: 0,
+    proPrecoCusto: null,
+    proPrecoVenda: null,
+    quantidadeEstoque: null,
     categoria: '',
     codigoBarras: '',
     marca:'',
@@ -23,6 +23,7 @@ export class ProductCreateComponent implements OnInit{
     ativo: true,
     dataCadastro:'',
     dataAtualizacao:'',
+    proFornecedor: null
   }
 
   //importando productService

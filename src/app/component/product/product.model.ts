@@ -1,9 +1,9 @@
 export interface Product{
     proId?: number
     proNome: string
-    proPrecoCusto: number
-    proPrecoVenda: number
-    quantidadeEstoque: number
+    proPrecoCusto: number | null
+    proPrecoVenda: number | null
+    quantidadeEstoque: number | null
     categoria: string
     codigoBarras: string
     marca:string
@@ -11,4 +11,5 @@ export interface Product{
     ativo:boolean 
     dataCadastro:string
     dataAtualizacao:string
+    proFornecedor: number | null
 }
