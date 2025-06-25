@@ -9,10 +9,10 @@
     <div class="top-bar">
       <span>Sistema Fiep</span>
       <nav class="institucional-links">
-        <a href="#">FIEP</a><span>•</span>
-        <a href="#">SESI</a><span>•</span>
-        <a href="#">SENAI</a><span>•</span>
-        <a href="#">IEL</a>
+        <a href="https://novo.fiepr.org.br/">FIEP</a><span>•</span>
+        <a href="https://www.sesipr.org.br/">SESI</a><span>•</span>
+        <a href="https://www.senaipr.org.br/">SENAI</a><span>•</span>
+        <a href="https://www.ielpr.org.br/">IEL</a>
       </nav>
       <nav class="extra-links">
         <a href="#">Imprensa</a>
@@ -20,23 +20,22 @@
         <a href="#">Carreira</a>
         <a href="#">SAC</a>
         <a href="#">Ouvidoria</a>
-        <a href="#">Fale com o Presidente</a>
       </nav>
     </div>
     <div class="main-nav">
       <div class="logo-area">
-        <img src="assets/img/logoSenai.png" alt="Logo Senai" />
+        <img  class="logo branca" src="assets/img/logoSenai.png" alt="Logo Senai" />
         <span>Sistema Fiep</span>
       </div>
       <nav class="main-menu">
         <a href="#">Áreas de Atuação</a>
         <a href="#">O Sistema Fiep</a>
-        <a href="#">Publicações</a>
-        <a href="#">Notícias</a>
+        <a href="https://novo.sistemafiep.org.br/nossas-publicacoes">Publicações</a>
+        <a href="https://agenciafiep.com.br/">Notícias</a>
       </nav>
       <div class="header-actions">
         <input type="text" placeholder="Pesquisar..." />
-        <button>Atendimento</button>
+        <button (click)="openAtendimento()">Atendimento</button>
       </div>
     </div>
   </header>
@@ -58,34 +57,39 @@
         <a href="#">Ética e Integridade</a>
         <a href="#">Canal de Ética</a>
         <a href="#">Condições de Contratação</a>
+      </div> 
+      <div class="legal-links">
+        <h4>O Sistema de Confiança</h4>
+        <a href="#">Proteção e Privacidade</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Programa de Integridade</a>
       </div>
       <div>
         <h4>Contato</h4>
-        <a href="#">WhatsApp</a>
-        <a href="#">Unidades</a>
+        <a href="https://api.whatsapp.com/send?phone=558006480088&text=Oi">WhatsApp</a>
+        <a href="https://novo.sistemafiep.org.br/unidades">Unidades</a>
+      </div>
+      
+      <div class="social-icons">  
+        <h4>Redes Sociais</h4>
+        <a href="https://www.facebook.com/senaipr"><i class="material-icons">facebook</i></a>
+        <a href=" https://www.youtube.com/@SENAIPR"><i class="material-icons">youtube</i></a>
+        <a href="https://www.linkedin.com/company/senai-pr"><i class="material-icons"> LinkedIn </i></a>
       </div>
       <div class="qr-highlight">
         <h4>Notícias da Indústria</h4>
         <img src="assets/img/qr-code.png" alt="QR Code" />
         <p>Nosso canal oficial para você saber tudo em primeira mão.</p>
-        <button>Comunidade WhatsApp</button>
+        <button (click)="openWhatsapp()">Comunidade WhatsApp</button>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-logo">
-        <img src="assets/img/logoSenai.png" alt="Logo Senai" />
+        <img  class="logo branca" src="assets/img/logoSenai.png" alt="Logo Senai" />
         <span>Sistema Fiep</span>
       </div>
-      <nav class="legal-links">
-        <a href="#">Proteção e Privacidade</a>
-        <a href="#">Política de Privacidade</a>
-        <a href="#">Programa de Integridade</a>
-      </nav>
-      <div class="social-icons">
-        <a href="#"><i class="material-icons">facebook</i></a>
-        <a href="#"><i class="material-icons">youtube</i></a>
-        <a href="#"><i class="material-icons">linkedin</i></a>
-      </div>
+     
+      
     </div>
   </footer>
   

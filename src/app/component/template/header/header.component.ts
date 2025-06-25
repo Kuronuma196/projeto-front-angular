@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  trocarCorLogo(cor: 'branca' | 'azul-escuro') {
+    const logo = document.querySelector('.logo') as HTMLElement;
+    logo.className = 'logo ' + cor;
+  }
 }

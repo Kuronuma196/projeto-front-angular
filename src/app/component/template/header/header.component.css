@@ -14,7 +14,13 @@
     background: linear-gradient(to right, #030e2b, #66a6ff);
     padding: 0 20px;
 }
-
+.logo.branca {
+    filter: brightness(0) invert(1);
+  }
+  .logo.azul-escuro {
+    filter: brightness(0) saturate(100%) invert(7%) sepia(21%) saturate(1655%) hue-rotate(198deg) brightness(95%) contrast(108%);
+  }
+    
 /* Efeito LED branco ainda mais fraco ao passar o mouse no grupo central */
 .header .title-group a:hover {
     filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.15))
@@ -75,10 +81,11 @@
 
 /* Logo grande à direita */
 .header .title-group3 .logo {
-    padding-bottom: 42px;
+    padding-bottom: 306px;
     max-height: 370px;
     height: 370px;
     width: 800px;
+    opacity: 30%;
 }
 
 /* Efeito LED suave ao passar o mouse */

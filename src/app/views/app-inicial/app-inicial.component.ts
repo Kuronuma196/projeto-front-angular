@@ -29,12 +29,16 @@ export class AppInicialComponent {
 
   // Exemplo para botão de atendimento
   openAtendimento(): void {
-    this.openExternal('https://wa.me/5541999999999'); // Substitua pelo canal real
+    this.openExternal('https://novo.sistemafiep.org.br/atendimento'); // Substitua pelo canal real
   }
 
   // Comunidade WhatsApp (QR Code)
   openWhatsapp(): void {
-    this.openExternal('https://wa.me/5541999999999'); // Substitua pelo canal real
+    this.openExternal('https://chat.whatsapp.com/GGLyX5IOsIp3867gIv9yBD'); // Substitua pelo canal real
+  }
+  trocarCorLogo(cor: 'branca' | 'azul-escuro') {
+    const logo = document.querySelector('.logo') as HTMLElement;
+    logo.className = 'logo ' + cor;
   }
   
 }

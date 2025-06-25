@@ -175,3 +175,9 @@
   color: white;
   font-size: 20px;
 }
+ .logo.branca {
+  filter: brightness(0) invert(1);
+}
+  .logo.azul-escuro {
+  filter: brightness(0) saturate(100%) invert(7%) sepia(21%) saturate(1655%) hue-rotate(198deg) brightness(95%) contrast(108%);
+}
