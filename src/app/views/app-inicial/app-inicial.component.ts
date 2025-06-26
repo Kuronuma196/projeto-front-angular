@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { PesquisaService } from 'src/app/component/chatbot1/pesquisa.service';// ajuste o caminho conforme o projeto
+
 
 @Component({
   selector: 'app-app-inicial',
@@ -8,37 +10,66 @@ import { Router } from '@angular/router';
 })
 export class AppInicialComponent {
  
+  
   showDropdown: 'areas' | 'sistema' | '' = '';
 
-  constructor(private router: Router) {}
+  mensagemUsuario = '';
+  respostaPesquisa = '';
+  loading = false;
+  historicoMensagens: { autor: 'usuario' | 'sistema', texto: string }[] = [];
 
-  // Controla exibição do dropdown
+  constructor(private router: Router, private pesquisaService: PesquisaService) {}
+
   setDropdown(menu: 'areas' | 'sistema' | ''): void {
     this.showDropdown = menu;
   }
 
-  // Navega para rota interna do Angular
   goTo(route: string): void {
     this.router.navigate([route]);
   }
 
-  // Abre links externos (como WhatsApp)
   openExternal(url: string): void {
     window.open(url, '_blank');
   }
 
-  // Exemplo para botão de atendimento
-  openAtendimento(): void {
-    this.openExternal('https://novo.sistemafiep.org.br/atendimento'); // Substitua pelo canal real
+  openWhatsapp(): void {
+    this.openExternal('https://chat.whatsapp.com/GGLyX5IOsIp3867gIv9yBD');
   }
 
-  // Comunidade WhatsApp (QR Code)
-  openWhatsapp(): void {
-    this.openExternal('https://chat.whatsapp.com/GGLyX5IOsIp3867gIv9yBD'); // Substitua pelo canal real
-  }
   trocarCorLogo(cor: 'branca' | 'azul-escuro') {
     const logo = document.querySelector('.logo') as HTMLElement;
     logo.className = 'logo ' + cor;
   }
-  
+
+  enviarMensagem() {
+    const pergunta = this.mensagemUsuario.trim();
+    if (!pergunta) return;
+
+    this.loading = true;
+    this.respostaPesquisa = '';
+    this.historicoMensagens.push({ autor: 'usuario', texto: pergunta });
+
+    this.pesquisaService.pesquisar(pergunta).subscribe({
+      next: data => {
+        this.respostaPesquisa = data.resposta;
+        this.historicoMensagens.push({ autor: 'sistema', texto: data.resposta });
+        this.loading = false;
+        this.mensagemUsuario = '';
+      },
+      error: () => {
+        const erroMsg = 'Erro ao buscar resposta.';
+        this.respostaPesquisa = erroMsg;
+        this.historicoMensagens.push({ autor: 'sistema', texto: erroMsg });
+        this.loading = false;
+      }
+    });
+  }
+
+  openAtendimento() {
+    const mensagem = this.mensagemUsuario.trim();
+    if (!mensagem) return;
+
+    this.historicoMensagens.push({ autor: 'usuario', texto: mensagem });
+    this.mensagemUsuario = '';
+  }
 }

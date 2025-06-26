@@ -1,0 +1,10 @@
+<div>
+    <input [(ngModel)]="pergunta" (keyup.enter)="buscar()"
+           placeholder="Digite sua dúvida sobre SENAI, SESI, SENAC, IEL, FIEP" />
+    <button (click)="buscar()" [disabled]="loading">
+      {{ loading ? 'Buscando...' : 'Pesquisar' }}
+    </button>
+  </div>
+  <div *ngIf="resposta">
+    <p>{{ resposta }}</p>
+  </div>

@@ -15,11 +15,11 @@
         <a href="https://www.ielpr.org.br/">IEL</a>
       </nav>
       <nav class="extra-links">
-        <a href="#">Imprensa</a>
-        <a href="#">Compras</a>
-        <a href="#">Carreira</a>
-        <a href="#">SAC</a>
-        <a href="#">Ouvidoria</a>
+        <a href="http://www.agenciafiep.com.br/">Imprensa</a>
+        <a href="https://portaldecompras.sistemafiep.org.br/">Compras</a>
+        <a href="http://carreiras.sistemafiep.org.br/">Carreira</a>
+        <a href="https://www.sistemafiep.org.br/abrir-solicitacao-no-sac-6-33649-466797.shtml">SAC</a>
+        <a href="https://www.sistemafiep.org.br/transparencia/ouvidoria-6-42306-485083.shtml">Ouvidoria</a>
       </nav>
     </div>
     <div class="main-nav">
@@ -28,14 +28,22 @@
         <span>Sistema Fiep</span>
       </div>
       <nav class="main-menu">
-        <a href="#">Áreas de Atuação</a>
-        <a href="#">O Sistema Fiep</a>
+        <a href="https://novo.sistemafiep.org.br/areas-de-atuacao">Áreas de Atuação</a>
+        <a href="https://novo.sistemafiep.org.br/o-sistema-fiep">O Sistema Fiep</a>
         <a href="https://novo.sistemafiep.org.br/nossas-publicacoes">Publicações</a>
         <a href="https://agenciafiep.com.br/">Notícias</a>
       </nav>
       <div class="header-actions">
-        <input type="text" placeholder="Pesquisar..." />
-        <button (click)="openAtendimento()">Atendimento</button>
+        <input type="text" placeholder="Pesquisar..." [(ngModel)]="mensagemUsuario" (keyup.enter)="enviarMensagem()" />
+        <button (click)="openAtendimento()">Enviar Atendimento</button>
+      </div>
+      
+      <div *ngIf="respostaPesquisa && !loading" class="resposta-box">
+        <p>{{ respostaPesquisa }}</p>
+      </div>
+      
+      <div *ngIf="loading" class="resposta-box">
+        <p>Buscando resposta...</p>
       </div>
     </div>
   </header>
@@ -69,12 +77,11 @@
         <a href="https://api.whatsapp.com/send?phone=558006480088&text=Oi">WhatsApp</a>
         <a href="https://novo.sistemafiep.org.br/unidades">Unidades</a>
       </div>
-      
-      <div class="social-icons">  
-        <h4>Redes Sociais</h4>
-        <a href="https://www.facebook.com/senaipr"><i class="material-icons">facebook</i></a>
-        <a href=" https://www.youtube.com/@SENAIPR"><i class="material-icons">youtube</i></a>
-        <a href="https://www.linkedin.com/company/senai-pr"><i class="material-icons"> LinkedIn </i></a>
+        <div class="social-icons">  
+          <h4>Redes Sociais</h4> 
+          <a href="https://www.youtube.com/@SistemaFiepOficial" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+          <a href="https://www.linkedin.com/company/sistemafiep" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://www.facebook.com/senaipr" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
       </div>
       <div class="qr-highlight">
         <h4>Notícias da Indústria</h4>
@@ -92,5 +99,5 @@
       
     </div>
   </footer>
-  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="app-inicial.component.ts"></script>

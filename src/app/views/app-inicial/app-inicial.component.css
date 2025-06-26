@@ -14,6 +14,44 @@
   margin-top: 64px; /* mesma altura do cabeçalho */
   padding: 16px;
 }
+
+.fiep-footer .social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px; /* Espaço entre os ícones */
+  font-size: 12px; /* Tamanho menor do texto */
+  margin-top: 8px;
+}
+
+.fiep-footer .social-icons h4 {
+ 
+  margin-bottom: 8px;
+}
+
+
+.fiep-footer .social-icons a {
+  font-size: 14px;
+  color: #c0e8ff;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c0e8ff; /* Azul claro desbotado */
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.fiep-footer .social-icons a i {
+  font-size: 18px;
+}
+.fiep-footer .footer-columns a:hover{
+  color: #1b68ce; /* Realce ao passar o mouse */
+}
+.fiep-footer .social-icons a:hover {
+  color: #1b68ce; /* Realce ao passar o mouse */
+}
 /* --------- Cabeçalho --------- */
 .fiep-header {
   background-color: #0f1f4b;
@@ -172,12 +210,18 @@
 
 .fiep-footer .social-icons a {
   margin: 0 5px;
-  color: white;
-  font-size: 20px;
+  color: rgb(169, 203, 216);
+  font-size: 15px;
 }
  .logo.branca {
   filter: brightness(0) invert(1);
 }
   .logo.azul-escuro {
   filter: brightness(0) saturate(100%) invert(7%) sepia(21%) saturate(1655%) hue-rotate(198deg) brightness(95%) contrast(108%);
+}
+.resposta-box {
+  margin-top: 1rem;
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 6px;
 }

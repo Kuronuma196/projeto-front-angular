@@ -1,19 +1,43 @@
 /* Barra de navegação fixa */
 .header {
-    position: fixed; /* Fixa no topo da tela */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Garante que fique acima dos outros elementos */
-    width: 100%;
-    height: 64px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(to right, #030e2b, #66a6ff);
     padding: 0 20px;
-}
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  /* Agrupar os dois blocos à esquerda */
+  .title-group2,
+  .title-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* .title-group3 permanece à direita */
+  .title-group3 {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    max-height: 64px;
+    overflow: hidden;
+  }
+  
+  .title-group3 .logo {
+    max-height: 5px;
+    height: 5px;
+    width: 800px;
+    padding-top: 23px;
+    object-fit: contain;
+  }
+  
 .logo.branca {
     filter: brightness(0) invert(1);
   }
@@ -72,21 +96,6 @@
     margin-right: 5px;
 }
 
-/* Grupo da direita */
-.header .title-group3 {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-}
-
-/* Logo grande à direita */
-.header .title-group3 .logo {
-    padding-bottom: 306px;
-    max-height: 370px;
-    height: 370px;
-    width: 800px;
-    opacity: 30%;
-}
 
 /* Efeito LED suave ao passar o mouse */
 .header .title-group2 .logo:hover {

@@ -41,6 +41,7 @@ import { ClienteUpdateComponent } from './component/cliente/cliente-update/clien
 import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
 import { MatSelectModule } from '@angular/material/select';
 import { AppInicialComponent } from './views/app-inicial/app-inicial.component';
+import { ChatComponent } from './component/chatbot1/chat/chat.component';
 
 
 
@@ -73,6 +74,7 @@ import { AppInicialComponent } from './views/app-inicial/app-inicial.component';
     ClienteUpdateComponent,
     ClienteDeleteComponent,
     AppInicialComponent,
+    ChatComponent,
   ],
   imports: [
     MatSelectModule,
