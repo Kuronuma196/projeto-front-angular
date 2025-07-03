@@ -24,28 +24,38 @@
     </div>
     <div class="main-nav">
       <div class="logo-area">
-        <img  class="logo branca" src="assets/img/logoSenai.png" alt="Logo Senai" />
+        <img class="logo branca" src="assets/img/logoSenai.png" alt="Logo Senai" />
         <span>Sistema Fiep</span>
       </div>
+    
       <nav class="main-menu">
-        <a href="https://novo.sistemafiep.org.br/areas-de-atuacao">Áreas de Atuação</a>
-        <a href="https://novo.sistemafiep.org.br/o-sistema-fiep">O Sistema Fiep</a>
+        <a href="#">Áreas de Atuação</a>
+        <a href="#">O Sistema Fiep</a>
         <a href="https://novo.sistemafiep.org.br/nossas-publicacoes">Publicações</a>
         <a href="https://agenciafiep.com.br/">Notícias</a>
       </nav>
+    
       <div class="header-actions">
-        <input type="text" placeholder="Pesquisar..." [(ngModel)]="mensagemUsuario" (keyup.enter)="enviarMensagem()" />
-        <button (click)="openAtendimento()">Enviar Atendimento</button>
-      </div>
-      
-      <div *ngIf="respostaPesquisa && !loading" class="resposta-box">
-        <p>{{ respostaPesquisa }}</p>
-      </div>
-      
-      <div *ngIf="loading" class="resposta-box">
-        <p>Buscando resposta...</p>
+        <input type="text" placeholder="Iniciar Pesquisa..." [(ngModel)]="mensagemUsuario" (keyup.enter)="enviarMensagem()" />
+        <button (click)="openAtendimento()">Pesquisar</button>
       </div>
     </div>
+    <!-- Janela de chat em estilo WhatsApp -->
+<div class="chat-janela" *ngIf="historicoMensagens.length > 0 || loading">
+  <div class="chat-mensagens">
+    <div *ngFor="let msg of historicoMensagens" [ngClass]="msg.autor === 'usuario' ? 'msg usuario' : 'msg sistema'">
+      <span>{{ msg.texto }}</span>
+    </div>
+    <div *ngIf="loading" class="msg sistema">
+      <span>Buscando resposta...</span>
+    </div>
+  </div>
+</div>
+
+    
+   
+    
+    
   </header>
   
   <footer class="fiep-footer">

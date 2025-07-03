@@ -1,3 +1,66 @@
+.chat-historico {
+  margin: 16px 24px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #aedbff;
+}
+
+.mensagem {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.mensagem.usuario {
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.mensagem.sistema {
+  background-color: #ffffff;
+  text-align: left;
+}
+.chat-janela {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 350px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.chat-mensagens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.msg {
+  padding: 10px 14px;
+  border-radius: 15px;
+  max-width: 75%;
+  word-break: break-word;
+}
+
+.msg.usuario {
+  align-self: flex-end;
+  background-color: #4ddfd7;
+  text-align: left;
+}
+
+.msg.sistema {
+  align-self: flex-start;
+  background-color: #6985ff;
+  text-align: left;
+}
 
 .cabecalho-branco {
   height: 64px;

@@ -13,12 +13,42 @@ export class AppInicialComponent {
   
   showDropdown: 'areas' | 'sistema' | '' = '';
 
-  mensagemUsuario = '';
-  respostaPesquisa = '';
-  loading = false;
+  mensagemUsuario: string = '';
   historicoMensagens: { autor: 'usuario' | 'sistema', texto: string }[] = [];
+  loading = false;
 
   constructor(private router: Router, private pesquisaService: PesquisaService) {}
+
+  enviarMensagem() {
+    const pergunta = this.mensagemUsuario.trim();
+    if (!pergunta) return;
+
+    this.historicoMensagens.push({ autor: 'usuario', texto: pergunta });
+    this.mensagemUsuario = '';
+    this.loading = true;
+
+    this.pesquisaService.pesquisar(pergunta).subscribe({
+      next: (res) => {
+        this.historicoMensagens.push({
+          autor: 'sistema',
+          texto: res.resposta || 'Nenhuma resposta encontrada.'
+        });
+        this.loading = false;
+      },
+      error: (err) => {
+        console.error('Erro ao buscar resposta:', err);
+        this.historicoMensagens.push({
+          autor: 'sistema',
+          texto: 'Erro ao buscar resposta da web.'
+        });
+        this.loading = false;
+      }
+    });
+  }
+
+  openAtendimento() {
+    this.enviarMensagem();
+  }
 
   setDropdown(menu: 'areas' | 'sistema' | ''): void {
     this.showDropdown = menu;
@@ -41,35 +71,6 @@ export class AppInicialComponent {
     logo.className = 'logo ' + cor;
   }
 
-  enviarMensagem() {
-    const pergunta = this.mensagemUsuario.trim();
-    if (!pergunta) return;
+ 
 
-    this.loading = true;
-    this.respostaPesquisa = '';
-    this.historicoMensagens.push({ autor: 'usuario', texto: pergunta });
-
-    this.pesquisaService.pesquisar(pergunta).subscribe({
-      next: data => {
-        this.respostaPesquisa = data.resposta;
-        this.historicoMensagens.push({ autor: 'sistema', texto: data.resposta });
-        this.loading = false;
-        this.mensagemUsuario = '';
-      },
-      error: () => {
-        const erroMsg = 'Erro ao buscar resposta.';
-        this.respostaPesquisa = erroMsg;
-        this.historicoMensagens.push({ autor: 'sistema', texto: erroMsg });
-        this.loading = false;
-      }
-    });
-  }
-
-  openAtendimento() {
-    const mensagem = this.mensagemUsuario.trim();
-    if (!mensagem) return;
-
-    this.historicoMensagens.push({ autor: 'usuario', texto: mensagem });
-    this.mensagemUsuario = '';
-  }
 }
