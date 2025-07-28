@@ -23,18 +23,29 @@
   background-color: #ffffff;
   text-align: left;
 }
+
+.Fundo {
+  background-image: url('assets/img/fundo-chat.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
 .chat-janela {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   margin-top: 10px;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 10px;
   max-height: 350px;
   overflow-y: auto;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .chat-mensagens {
@@ -52,13 +63,15 @@
 
 .msg.usuario {
   align-self: flex-end;
-  background-color: #4ddfd7;
+  background-color: rgba(77, 223, 215, 0.7);
+  color: white;
   text-align: left;
 }
 
 .msg.sistema {
   align-self: flex-start;
-  background-color: #6985ff;
+  background-color: rgba(105, 133, 255, 0.7);
+  color: white;
   text-align: left;
 }
 
@@ -74,7 +87,7 @@
 }
 
 .conteudo {
-  margin-top: 64px; /* mesma altura do cabeçalho */
+  margin-top: 64px;
   padding: 16px;
 }
 
@@ -82,16 +95,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px; /* Espaço entre os ícones */
-  font-size: 12px; /* Tamanho menor do texto */
+  gap: 6px;
+  font-size: 12px;
   margin-top: 8px;
 }
 
 .fiep-footer .social-icons h4 {
- 
   margin-bottom: 8px;
 }
-
 
 .fiep-footer .social-icons a {
   font-size: 14px;
@@ -100,7 +111,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #c0e8ff; /* Azul claro desbotado */
   text-decoration: none;
   font-size: 12px;
   transition: color 0.3s ease;
@@ -109,13 +119,15 @@
 .fiep-footer .social-icons a i {
   font-size: 18px;
 }
-.fiep-footer .footer-columns a:hover{
-  color: #1b68ce; /* Realce ao passar o mouse */
+
+.fiep-footer .footer-columns a:hover {
+  color: #1b68ce;
 }
+
 .fiep-footer .social-icons a:hover {
-  color: #1b68ce; /* Realce ao passar o mouse */
+  color: #1b68ce;
 }
-/* --------- Cabeçalho --------- */
+
 .fiep-header {
   background-color: #0f1f4b;
   color: white;
@@ -191,7 +203,6 @@
   cursor: pointer;
 }
 
-/* --------- Rodapé --------- */
 .fiep-footer {
   background-color: #0f1f4b;
   color: white;
@@ -276,12 +287,15 @@
   color: rgb(169, 203, 216);
   font-size: 15px;
 }
- .logo.branca {
+
+.logo.branca {
   filter: brightness(0) invert(1);
 }
-  .logo.azul-escuro {
+
+.logo.azul-escuro {
   filter: brightness(0) saturate(100%) invert(7%) sepia(21%) saturate(1655%) hue-rotate(198deg) brightness(95%) contrast(108%);
 }
+
 .resposta-box {
   margin-top: 1rem;
   background: #f0f0f0;

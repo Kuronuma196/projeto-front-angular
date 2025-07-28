@@ -5,6 +5,8 @@
   <main class="conteudo">
     <!-- Conteúdo da página -->
   </main>
+
+  <div class="Fundo">
   <header class="fiep-header">
     <div class="top-bar">
       <span>Sistema Fiep</span>
@@ -40,7 +42,12 @@
         <button (click)="openAtendimento()">Pesquisar</button>
       </div>
     </div>
-    <!-- Janela de chat em estilo WhatsApp -->
+    </header>
+
+    
+   
+
+   <!-- Janela de chat em estilo WhatsApp -->
 <div class="chat-janela" *ngIf="historicoMensagens.length > 0 || loading">
   <div class="chat-mensagens">
     <div *ngFor="let msg of historicoMensagens" [ngClass]="msg.autor === 'usuario' ? 'msg usuario' : 'msg sistema'">
@@ -52,12 +59,8 @@
   </div>
 </div>
 
-    
-   
-    
-    
-  </header>
-  
+
+
   <footer class="fiep-footer">
     <div class="footer-columns">
       <div>
@@ -111,3 +114,4 @@
   </footer>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="app-inicial.component.ts"></script>
+</div>
