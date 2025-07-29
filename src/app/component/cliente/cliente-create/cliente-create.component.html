@@ -4,29 +4,50 @@
   <!-- Conteúdo da página -->
 </main>
 <mat-card class="fundo1">
-    <div style="display:flex; justify-content:flex-inicial">
+  <div style="display:flex; justify-content:flex-inicial">
     <mat-card-title class="Nome">Novo Cliente</mat-card-title>
-</div>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="cliente.cliNome" name="cliNome">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="CPF" [(ngModel)]="cliente.cliCpf" name="cliCpf">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="E-mail" [(ngModel)]="cliente.cliEmail" name="cliEmail">
-        </mat-form-field>
-    </form>
+  </div>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="cliente.cliNome" name="cliNome">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="CPF" [(ngModel)]="cliente.cliCpf" name="cliCpf">
+    </mat-form-field>
 
-    <div style="gap: 10px; display:flex; justify-content:flex-end">
+    <h3>Contato</h3>
+    <mat-form-field>
+      <input matInput placeholder="E-mail" [(ngModel)]="cliente.contato.email" name="cliEmail">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Telefone" [(ngModel)]="cliente.contato.telefone" name="cliTelefone">
+    </mat-form-field>
+
+    <h3>Endereço</h3>
+    <mat-form-field>
+      <input matInput placeholder="Rua" [(ngModel)]="cliente.endereco.rua" name="rua">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Número" [(ngModel)]="cliente.endereco.numero" name="numero">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Cidade" [(ngModel)]="cliente.endereco.cidade" name="cidade">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Estado" [(ngModel)]="cliente.endereco.estado" name="estado">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="CEP" [(ngModel)]="cliente.endereco.cep" name="cep">
+    </mat-form-field>
+  </form>
+
+  <div style="gap: 10px; display:flex; justify-content:flex-end">
     <button mat-raised-button (click)="createCliente()" color="primary">
-        Salvar
+      Salvar
     </button>
-    
-    <button mat-raised-button (click)="cancel()">
-        Cancelar
-    </button>
-</div>
 
+    <button mat-raised-button (click)="cancel()">
+      Cancelar
+    </button>
+  </div>
 </mat-card>

@@ -13,7 +13,18 @@ export class FornecedorCreateComponent implements OnInit{
   fornecedor: Fornecedor = {
     forNomeFantasia:"",
     forCnpj: "",
-    forRazaoSocial:""
+    forRazaoSocial:"",
+    contato: {
+      telefone: '',
+      email: ''
+    },
+    endereco: {
+      rua: '',
+      numero: '',
+      cidade: '',
+      estado: '',
+      cep: ''
+    }
   }
 
   //importando productService

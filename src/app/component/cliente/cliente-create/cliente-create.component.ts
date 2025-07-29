@@ -8,31 +8,36 @@ import { Cliente } from '../cliente.model';
   templateUrl: './cliente-create.component.html',
   styleUrls: ['./cliente-create.component.css']
 })
-export class ClienteCreateComponent implements OnInit{
+export class ClienteCreateComponent implements OnInit {
 
   cliente: Cliente = {
     cliNome: '',
     cliCpf: '',
-    cliEmail: '',
-    cliTelefone: '',
-  }
+    contato: {
+      email: '',
+      telefone: ''
+    },
+    endereco: {
+      rua: '',
+      numero: '',
+      cidade: '',
+      estado: '',
+      cep: ''
+    }
+  };
 
-  //importando clienteService
-  constructor(private clienteService: ClienteService,
-    private router: Router) { }
-  
-  ngOnInit(): void {
-    
-  }
+  constructor(private clienteService: ClienteService, private router: Router) {}
+
+  ngOnInit(): void {}
 
   createCliente(): void {
     this.clienteService.create(this.cliente).subscribe(() => {
-      this.clienteService.showMessage('Cliente adicionado!')
-      this.router.navigate(['/clientes'])
-    })
+      this.clienteService.showMessage('Cliente adicionado!');
+      this.router.navigate(['/clientes']);
+    });
   }
 
   cancel(): void {
-    this.router.navigate(['/clientes'])
-  }  
+    this.router.navigate(['/clientes']);
+  }
 }
