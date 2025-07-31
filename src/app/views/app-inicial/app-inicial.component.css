@@ -19,6 +19,7 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .mensagem.usuario {
@@ -30,15 +31,15 @@ main {
   background-color: #ffffff;
   text-align: left;
 }
-
 .Fundo {
+  position: relative;
+  background-image: url('/assets/img/download.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  
+  padding-bottom: 60px; /* espaço para o rodapé dentro do fundo */
 }
-
 
 .chat-janela {
   width: 100%;
@@ -252,6 +253,13 @@ main {
   margin-top: 48px;
   /* Opcional para destacar */
   box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+  position: absolute;
+  bottom: 20px; /* sobe 20px em relação à base do fundo */
+  left: 0;
+  width: 97%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 .fiep-footer .footer-columns {
   display: grid;
