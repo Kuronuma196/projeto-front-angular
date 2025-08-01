@@ -3,7 +3,7 @@
 }
 
 .sidenav {
-  background: linear-gradient(to bottom, #3F51B5, #2e3b86, #1e2a6e);
+  background: linear-gradient(to bottom, #07103f, #060a20, #01030e);
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
 }
 
 .anima:hover {
-  color: black;
+  color: rgb(0, 225, 255);
 }
 
 .content {

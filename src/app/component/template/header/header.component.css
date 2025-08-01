@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, #030e2b, #66a6ff);
+    background: linear-gradient(to right, #030e2b,#030e2b,#030e2b, #28b5ec);
     padding: 0 20px;
     height: 64px;
     position: fixed;
@@ -121,4 +121,66 @@ p {
     padding: 16px;
     background-color: #fff;
     margin-top: 64px; /* Compensa a altura do header fixo */
+}
+.sub-barra-login {
+  background: linear-gradient(to right, #010d27,#010d27);
+  color: white;
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 13px;
+  position: fixed;
+  top: 64px; /* abaixo da barra principal */
+  left: 0;
+  right: 0;
+  z-index: 999;
+  border-bottom: 1px solid #223c57;
+}
+
+.sub-logo-sistema .sub-nome-sistema {
+  font-weight: 500;
+  font-size: 14px;
+  color: #d8e6ff;
+}
+
+.sub-acoes-usuario {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sub-acoes-usuario .sub-link {
+  color: #d8e6ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sub-acoes-usuario .sub-link:hover {
+  color: #ffffff;
+}
+
+.sub-btn-login {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.sub-btn-login:hover {
+  background-color: #0097a7;
+}
+
+.sub-acoes-usuario i {
+  font-size: 14px;
+}
+
+/* Ajuste do conteúdo da página para compensar as duas barras fixas */
+.content {
+  margin-top: 106px; /* 64px da barra + 42px da sub-barra */
 }

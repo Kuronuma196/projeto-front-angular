@@ -7,7 +7,7 @@
     display: flex;
     justify-content: flex-end; /* Alinha o conteúdo à direita */
     align-items: center;
-    background-color: #3F51B5; /* Cor de fundo opcional */
+    background-color: #010d27; /* Cor de fundo opcional */
     color: white; /* Cor do texto */
     padding: 8px 20px; /* Espaçamento interno */
     height: 48px; /* Altura padrão de uma toolbar */

@@ -1,3 +1,59 @@
+.barra-topo-login {
+  background: linear-gradient(90deg, #000428, #004e92); /* Azul escuro suave */
+  color: white;
+  padding: 6px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  border-bottom: 1px solid #11375b;
+  z-index: 1100;
+  position: relative;
+}
+
+.sistema-logo .nome-sistema {
+  font-weight: bold;
+  font-size: 16px;
+  color: #cce6ff;
+}
+
+.acoes-usuario {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.acoes-usuario a {
+  color: #cce6ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.acoes-usuario a:hover {
+  color: #ffffff;
+}
+
+.btn-login {
+  background: #00bcd4;
+  color: #fff;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: #0097a7;
+}
+
+.acoes-usuario i {
+  font-size: 16px;
+}
+
+
 .chat-historico {
   margin: 16px 24px;
   background: #ffffff;
