@@ -1,5 +1,6 @@
+/* Barra topo login */
 .barra-topo-login {
-  background: linear-gradient(90deg, #000428, #004e92); /* Azul escuro suave */
+  background: linear-gradient(90deg, #000428, #004e92);
   color: white;
   padding: 6px 16px;
   display: flex;
@@ -12,12 +13,82 @@
   position: relative;
 }
 
+/* Reset básico para html e body */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Container principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ocupa toda a altura da viewport */
+  position: relative;
+}
+
+/* Header fixo */
+.cabecalho-branco {
+  height: 64px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteúdo principal */
+.conteudo {
+  flex: 1 0 auto;    /* ocupa espaço disponível */
+  margin-top: 64px;  /* abaixo do header fixo */
+  padding: 16px;
+  overflow-y: auto;  /* permite scroll se necessário */
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer - rodapé fixo no fim da página */
+.fiep-footer {
+  flex-shrink: 0;    /* não encolhe */
+  background-color: rgba(15, 31, 75, 0.9);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 24px 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 96.5%;
+  position: relative;  /* mantém no fluxo normal */
+  margin-top: auto;    /* empurra para o fim da página */
+  z-index: 0;
+  top: 143px;
+}
+
+/* Fundo com imagem */
+.Fundo {
+  background-image: url('/assets/img/download.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  /* removi position relative e padding-bottom para evitar conflito */
+}
+
+/* Logo do sistema */
 .sistema-logo .nome-sistema {
   font-weight: bold;
   font-size: 16px;
   color: #cce6ff;
 }
 
+/* Ações do usuário */
 .acoes-usuario {
   display: flex;
   align-items: center;
@@ -34,6 +105,7 @@
   color: #ffffff;
 }
 
+/* Botão login */
 .btn-login {
   background: #00bcd4;
   color: #fff;
@@ -53,7 +125,7 @@
   font-size: 16px;
 }
 
-
+/* Histórico do chat */
 .chat-historico {
   margin: 16px 24px;
   background: #ffffff;
@@ -64,18 +136,11 @@
   border: 1px solid #aedbff;
 }
 
+/* Mensagens */
 .mensagem {
   margin-bottom: 10px;
   padding: 8px;
   border-radius: 6px;
-}
-main {
-  flex: 1 0 auto; /* main cresce e ocupa espaço restante */
-  padding: 16px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
 }
 
 .mensagem.usuario {
@@ -87,16 +152,18 @@ main {
   background-color: #ffffff;
   text-align: left;
 }
-.Fundo {
-  position: relative;
-  background-image: url('/assets/img/download.jpg');
+
+/* Main geral */
+main {
+  flex: 1 0 auto;
+  padding: 16px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  padding-bottom: 60px; /* espaço para o rodapé dentro do fundo */
+  width: 100%;
 }
 
+/* Janela de chat estilo WhatsApp */
 .chat-janela {
   width: 100%;
   max-width: 800px;
@@ -140,6 +207,7 @@ main {
   text-align: left;
 }
 
+/* Cabeçalho branco fixo */
 .cabecalho-branco {
   height: 64px;
   width: 100%;
@@ -151,11 +219,13 @@ main {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Conteúdo padding top para cabecalho */
 .conteudo {
   margin-top: 64px;
   padding: 16px;
 }
 
+/* Redes sociais no footer */
 .fiep-footer .social-icons {
   display: flex;
   flex-direction: column;
@@ -193,6 +263,7 @@ main {
   color: #1b68ce;
 }
 
+/* Header sistema Fiep */
 .fiep-header {
   background-color: #0f1f4b;
   color: white;
@@ -268,30 +339,28 @@ main {
   cursor: pointer;
 }
 
+/* Scrollbar da janela de chat */
 .chat-janela {
-  /* mantém o overflow para rolagem */
   overflow-y: auto;
-
-  /* estilo da scrollbar para navegadores baseados em WebKit (Chrome, Edge, Safari) */
 }
 
 .chat-janela::-webkit-scrollbar {
-  width: 10px;               /* largura da barra vertical */
+  width: 10px;
 }
 
 .chat-janela::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);  /* cor do fundo da barra */
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
 }
 
 .chat-janela::-webkit-scrollbar-thumb {
-  background-color: rgba(77, 223, 215, 0.7); /* cor do "polegar" da barra */
+  background-color: rgba(77, 223, 215, 0.7);
   border-radius: 8px;
-  border: 2px solid rgba(255, 255, 255, 0.2); /* espaçamento interno */
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .chat-janela::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(77, 223, 215, 1); /* cor ao passar o mouse */
+  background-color: rgba(77, 223, 215, 1);
 }
 
 /* Firefox */
@@ -300,23 +369,7 @@ main {
   scrollbar-color: rgba(77, 223, 215, 0.7) rgba(255, 255, 255, 0.1);
 }
 
-.fiep-footer {
-  flex-shrink: 0; /* footer não encolhe */
-  background-color: #0f1f4b;
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
-  padding: 40px 24px 20px;
-  margin-top: 48px;
-  /* Opcional para destacar */
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
-  position: absolute;
-  bottom: 20px; /* sobe 20px em relação à base do fundo */
-  left: 0;
-  width: 97%;
-  height: 40%;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
+/* Footer colunas */
 .fiep-footer .footer-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -324,6 +377,7 @@ main {
   margin-bottom: 32px;
 }
 
+/* Títulos footer */
 .fiep-footer h4 {
   margin-bottom: 12px;
   font-size: 16px;
@@ -331,6 +385,7 @@ main {
   padding-left: 8px;
 }
 
+/* Links footer */
 .fiep-footer a {
   display: block;
   color: #c0e8ff;
@@ -339,6 +394,7 @@ main {
   font-size: 14px;
 }
 
+/* Destaque QR code no footer */
 .fiep-footer .qr-highlight {
   background: #00e5ff;
   padding: 16px;
@@ -362,6 +418,7 @@ main {
   border-radius: 4px;
 }
 
+/* Rodapé inferior */
 .fiep-footer .footer-bottom {
   border-top: 1px solid #333;
   display: flex;
@@ -372,6 +429,7 @@ main {
   font-size: 13px;
 }
 
+/* Logo no footer */
 .fiep-footer .footer-logo {
   display: flex;
   align-items: center;
@@ -382,26 +440,31 @@ main {
   height: 30px;
 }
 
+/* Links legais footer */
 .fiep-footer .legal-links a {
   margin: 0 10px;
   color: #c0e8ff;
   text-decoration: none;
 }
 
+/* Ícones sociais */
 .fiep-footer .social-icons a {
   margin: 0 5px;
   color: rgb(169, 203, 216);
   font-size: 15px;
 }
 
+/* Logo branca */
 .logo.branca {
   filter: brightness(0) invert(1);
 }
 
+/* Logo azul escuro */
 .logo.azul-escuro {
   filter: brightness(0) saturate(100%) invert(7%) sepia(21%) saturate(1655%) hue-rotate(198deg) brightness(95%) contrast(108%);
 }
 
+/* Caixa resposta */
 .resposta-box {
   margin-top: 1rem;
   background: #f0f0f0;

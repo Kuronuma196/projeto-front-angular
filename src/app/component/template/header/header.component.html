@@ -1,37 +1,43 @@
 
 <mat-toolbar class="header" met-elevation-z4>
-    <span class="title-group2">
-        <a href="https://novo.sistemafiep.org.br/">
-            <img class="logo" src="assets/img/logo-senai.png" alt="logo SENAI">
-        </a>
-        
-    </span>
-    <span class="title-group">
-        <a mat-list-item routerLink="/inicial">
-            <i class="material-icons">
-                dashboard
-            </i>
-            Tela Inicial
+
+    <span class="title-group2">     
+        <a href="https://novo.sistemafiep.org.br/"> 
+            <img class="logo" src="assets/img/logoSenai1.png" alt="logo SENAI">
         </a>
     </span>
+
+   <span class="title-group2">
+        <a href="https://www.senaipr.org.br/">
+            <img class="logo1" src="assets/img/fiep-senai-logo4.png" alt="logo SENAI">
+        </a> 
+
+    </span> 
+ 
     <span class="title-group3">
     
         <a>
             <img class="logo" class="logo azul-escuro" src="assets/img/LoveCity.png" alt="logo2">
         </a>
+        
     </span>
 </mat-toolbar>
 
 <!-- Barra secundária de login e navegação do usuário -->
 <div class="sub-barra-login">
   <div class="sub-logo-sistema">
-    <span class="sub-nome-sistema">SENAI | Sistema Fiep</span>
-  </div>
+        
+       <div class="sub-logo-sistema">
+        <span class="sub-nome-sistema">SENAI | Sistema Fiep</span>
+    </div>
+           
+  </div> 
+
   <div class="sub-acoes-usuario">
+    <a href="/" class="sub-link">Tela Inicial</a>
     <a href="/usuario" class="sub-link">Área do Usuário</a>
-    <a href="/ajuda" class="sub-link">Ajuda</a>
-    <a href="/notificacoes" class="sub-link"><i class="fas fa-bell"></i></a>
-    <a href="/suporte" class="sub-link">Suporte</a>
+    <a href="/inicial" class="sub-link">Centro de Suporte</a>
+    <a href="/notificacoes" class="sub-link"><a>Contatos</a></a>
     <button class="sub-btn-login">Login</button>
   </div>
 </div>

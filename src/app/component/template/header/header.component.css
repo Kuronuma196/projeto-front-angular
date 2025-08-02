@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, #030e2b,#030e2b,#030e2b, #28b5ec);
+    background: linear-gradient(to right, #030e2b,#030e2b,#0a1e57, #28b5ec);
     padding: 0 20px;
     height: 64px;
     position: fixed;
@@ -75,7 +75,19 @@
     width: auto;
     transition: all 0.3s ease-in-out;
 }
-
+.logo2 {
+    max-height: 40px;
+    height: auto;
+    width: auto;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+.header .logo1 {
+    max-height: 125px;
+    height: auto;
+    width: auto;
+    transition: all 0.3s ease-in-out;
+}
 /* Grupo da esquerda */
 .header .title-group2 {
     display: flex;
@@ -103,14 +115,22 @@
             drop-shadow(0 0 10px rgba(0, 153, 255, 0.2));
     transform: scale(1.03);
 }
-
+.header .title-group2 .logo1:hover {
+    filter: drop-shadow(0 0 6px rgba(0, 60, 255, 0.4))
+            drop-shadow(0 0 10px rgba(0, 153, 255, 0.2));
+    transform: scale(1.03);
+}
 /* Efeito de flutuação e brilho ao clicar */
 .header .title-group2 a:active .logo {
     transform: translateY(-2px) scale(1.05);
     filter: drop-shadow(0 0 12px rgba(0, 89, 255, 0.4));
     transition: transform 0.1s ease, filter 0.1s ease;
 }
-
+.header .title-group2 a:active .logo1 {
+    transform: translateY(-2px) scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(0, 89, 255, 0.4));
+    transition: transform 0.1s ease, filter 0.1s ease;
+}
 /* Estilo genérico para parágrafos */
 p {
     color: pink;
@@ -120,7 +140,8 @@ p {
 .content {
     padding: 16px;
     background-color: #fff;
-    margin-top: 64px; /* Compensa a altura do header fixo */
+   margin-top: 106px; /* 64px da barra + 42px da sub-barra */
+
 }
 .sub-barra-login {
   background: linear-gradient(to right, #010d27,#010d27);
@@ -180,7 +201,3 @@ p {
   font-size: 14px;
 }
 
-/* Ajuste do conteúdo da página para compensar as duas barras fixas */
-.content {
-  margin-top: 106px; /* 64px da barra + 42px da sub-barra */
-}
