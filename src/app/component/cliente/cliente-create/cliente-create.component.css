@@ -1,3 +1,4 @@
+/* Cabeçalho fixo branco */
 .cabecalho-branco {
   height: 64px;
   width: 100%;
@@ -9,56 +10,74 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Espaço abaixo do cabeçalho */
 .conteudo {
-  margin-top: 64px; /* mesma altura do cabeçalho */
+  margin-top: 64px;
   padding: 16px;
 }
-/* Fundo principal */
+
+/* Cartão de fundo escuro com brilho */
 .fundo1 {
   background: linear-gradient(to bottom, #19182d, #0d0d17);
   padding: 24px;
   border-radius: 12px;
   color: white;
-  box-shadow: 0 0 12px rgba(116, 0, 255, 0.4);
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Título principal e seções */
+/* Títulos principais */
 .Nome,
 h3 {
-  background-color: #1d1b2f;
-  color: #f2f2f2;
-  padding: 8px 16px;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: bold;
   display: inline-block;
-  margin-top: 12px;
-  margin-bottom: 16px;
-  box-shadow: 0 0 8px rgba(138, 43, 226, 0.4);
+  padding: 10px 24px;
+  border-radius: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: 24px 0 12px;
+  border-left: 6px solid #8844ee;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Agrupamento Parte1 e Parte2 lado a lado */
+.grupo-superior {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.Parte1,
+.Parte2 {
+  flex: 1 1 48%;
+  min-width: 300px;
+}
+
+/* Alinhamento dos campos horizontalmente */
+.campos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 /* Campos de formulário */
 mat-form-field {
-  width: 48%;
-  margin: 10px 1%;
-}
-
-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex: 1 1 45%;
+  min-width: 200px;
 }
 
 /* Botões */
 button {
-  padding: 8px 16px;
+  padding: 12px 28px;
+  font-size: 16px;
   font-weight: bold;
   color: white;
   background-color: transparent;
   border: 1px solid #8844ee;
   border-radius: 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 120px;
 }
 
 button:hover {

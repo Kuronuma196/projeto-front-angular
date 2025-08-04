@@ -10,7 +10,7 @@
     background-color: #010d27; /* Cor de fundo opcional */
     color: white; /* Cor do texto */
     padding: 8px 20px; /* Espaçamento interno */
-    height: 48px; /* Altura padrão de uma toolbar */
+    height: 25px; /* Altura padrão de uma toolbar */
     z-index: 1000; /* Garante que fique por cima de outros elementos */
     box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* Sombra sutil para destaque */
 }

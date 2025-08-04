@@ -1,0 +1,44 @@
+<header class="cabecalho-branco"></header>
+
+<main class="conteudo">
+  <!-- Conteúdo da página -->
+</main>
+
+<div class="cadastro-container">
+  <h2>Cadastro</h2>
+
+  <form (ngSubmit)="cadastrar()">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input id="nome" [(ngModel)]="nome" name="nome" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" [(ngModel)]="email" name="email" type="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Senha</label>
+      <input id="senha" [(ngModel)]="senha" name="senha" type="password" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="tipo">Tipo de Usuário</label>
+      <select class="select-estilizado" id="tipo" [(ngModel)]="tipo" name="tipo" required>
+        <option value="" disabled selected>Selecione um tipo</option>
+        <option value="FUNCIONARIO">Funcionário</option>
+        <option value="CLIENTE">Cliente</option>
+        <option value="ALUNO">Aluno</option>
+        <option value="FORNECEDOR">Fornecedor</option>
+      </select>
+    </div>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <button class="voltar-btn" (click)="voltarParaLogin()">Voltar para Login</button>
+
+  <div *ngIf="erro" class="erro">{{ erro }}</div>
+  <div *ngIf="sucesso" class="sucesso">{{ sucesso }}</div>
+</div>

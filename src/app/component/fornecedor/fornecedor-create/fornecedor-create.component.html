@@ -3,55 +3,70 @@
 <main class="conteudo">
   <!-- Conteúdo da página -->
 </main>
+
 <mat-card class="fundo1">
+  
+  <form>
+    <div class="grupo-superior">
+    <div class="Parte1">
+      <div style="display:flex; justify-content:flex-inicial">
+          <mat-card-title class="Nome">Novo Fornecedor</mat-card-title>
+          </div>
+    <div class="campos">
+     <mat-form-field appearance="fill">
+      <input matInput placeholder="Nome Fantasia" [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Razão Social" [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial">
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="Parte2">
     <div style="display:flex; justify-content:flex-inicial">
-    <mat-card-title class="Nome">Novo Fornecedor</mat-card-title>
+      <mat-card-title class="Nome">Contato</mat-card-title>
+  </div>
+    
+    <div class="campos">
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="E-mail" [(ngModel)]="fornecedor.contato.email" name="cliEmail">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Telefone" [(ngModel)]="fornecedor.contato.telefone" name="cliTelefone">
+    </mat-form-field>
+  </div>
 </div>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Razão Social" [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial">
-        </mat-form-field>
-
-        <h3>Contato</h3>
-        <mat-form-field>
-          <input matInput placeholder="E-mail" [(ngModel)]="fornecedor.contato.email" name="cliEmail">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Telefone" [(ngModel)]="fornecedor.contato.telefone" name="cliTelefone">
-        </mat-form-field>
-    
-        <h3>Endereço</h3>
-        <mat-form-field>
-          <input matInput placeholder="Rua" [(ngModel)]="fornecedor.endereco.rua" name="rua">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Número" [(ngModel)]="fornecedor.endereco.numero" name="numero">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Cidade" [(ngModel)]="fornecedor.endereco.cidade" name="cidade">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Estado" [(ngModel)]="fornecedor.endereco.estado" name="estado">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="CEP" [(ngModel)]="fornecedor.endereco.cep" name="cep">
-        </mat-form-field>
-    </form>
-
-    <div style="gap: 10px; display:flex; justify-content:flex-end">
-    <button mat-raised-button (click)="createFornecedor()" color="primary">
-        Salvar
-    </button>
-    
-    <button mat-raised-button (click)="cancel()">
-        Cancelar
-    </button>
 </div>
 
+   <div style="display:flex; justify-content:flex-inicial">
+    <mat-card-title class="Nome">Endereço</mat-card-title>
+    </div>
+
+    <div class="campos">
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Rua" [(ngModel)]="fornecedor.endereco.rua" name="rua">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Número" [(ngModel)]="fornecedor.endereco.numero" name="numero">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Cidade" [(ngModel)]="fornecedor.endereco.cidade" name="cidade">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Estado" [(ngModel)]="fornecedor.endereco.estado" name="estado">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="CEP" [(ngModel)]="fornecedor.endereco.cep" name="cep">
+    </mat-form-field>
+    </div>
+  </form>
+
+
+  <div class="button-row" style="gap: 10px; display:flex; justify-content:flex-end">
+    <button mat-raised-button (click)="createFornecedor()" color="primary">Salvar</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+  </div>
 </mat-card>

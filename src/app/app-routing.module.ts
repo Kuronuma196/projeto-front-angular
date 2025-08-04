@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './component/product/product-create/product-create.component';
@@ -19,83 +20,106 @@ import { FornecedorDeleteComponent } from './component/fornecedor/fornecedor-del
 import { FornecedorUpdateComponent } from './component/fornecedor/fornecedor-update/fornecedor-update.component';
 
 import { AppInicialComponent } from './views/app-inicial/app-inicial.component';
+import { LoginComponent } from './component/auth/login/login.component';
+import { CadastroComponent } from './component/auth/cadastro/cadastro.component';
+
+import { AuthGuard } from './component/auth/auth.guard';
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'cadastro', component: CadastroComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+
   {
-    path: "inicial",
-    component:AppInicialComponent
+    path: 'inicial',
+    component: AppInicialComponent,
+    canActivate: [AuthGuard]
   },
-{
-  path: "",
-  component:HomeComponent
-},
-{
-  path: "products",
-  component:ProductCrudComponent
-},
-{
-  path: "products/create",
-  component:ProductCreateComponent
-},
-{
-  path: "products/update/:proId",
-  component: ProductUpdateComponent
-},
-{
-  path: "products/delete/:proId",
-  component: ProductDeleteComponent
-},
-{
-  path: "formaPagamento",
-  component:PagamentoCrudComponent
-},
-{
-  path: "formaPagamento/create",
-  component:PagamentoCreateComponent
-},
-{
-  path: "formaPagamento/update/:fpgId",
-  component: PagamentoUpdateComponent
-},
-{
-  path: "formaPagamento/delete/:fpgId",
-  component: PagamentoDeleteComponent
-},
-{
-  path: "clientes",
-  component:ClienteCrudComponent
-},
-{
-  path: "clientes/create",
-  component:ClienteCreateComponent
-},
-{
-  path: "clientes/update/:cliId",
-  component:ClienteUpdateComponent
-},
-{
-  path: "clientes/delete/:cliId",
-  component:ClienteDeleteComponent
-},
-{
-  path: "fornecedores",
-  component:FornecedorCrudComponent
-},
-{
-  path: "fornecedores/create",
-  component:FornecedorCreateComponent
-},
-{
-  path: "fornecedores/delete/:forId",
-  component:FornecedorUpdateComponent
-},
-{
-  path: "fornecedores/delete/:forId",
-  component:FornecedorDeleteComponent
-},
-
-
-
+  {
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'products',
+    component: ProductCrudComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'products/create',
+    component: ProductCreateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'products/update/:proId',
+    component: ProductUpdateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'products/delete/:proId',
+    component: ProductDeleteComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'formaPagamento',
+    component: PagamentoCrudComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'formaPagamento/create',
+    component: PagamentoCreateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'formaPagamento/update/:fpgId',
+    component: PagamentoUpdateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'formaPagamento/delete/:fpgId',
+    component: PagamentoDeleteComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'clientes',
+    component: ClienteCrudComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'clientes/create',
+    component: ClienteCreateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'clientes/update/:cliId',
+    component: ClienteUpdateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'clientes/delete/:cliId',
+    component: ClienteDeleteComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'fornecedores',
+    component: FornecedorCrudComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'fornecedores/create',
+    component: FornecedorCreateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'fornecedores/update/:forId',
+    component: FornecedorUpdateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'fornecedores/delete/:forId',
+    component: FornecedorDeleteComponent,
+    canActivate: [AuthGuard]
+  },
 ];
 
 @NgModule({

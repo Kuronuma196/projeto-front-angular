@@ -23,7 +23,7 @@ import { ProductCreateComponent } from './component/product/product-create/produ
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProductUpdateComponent } from './component/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './component/product/product-delete/product-delete.component';
 import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
@@ -42,7 +42,10 @@ import { ClienteDeleteComponent } from './component/cliente/cliente-delete/clien
 import { MatSelectModule } from '@angular/material/select';
 import { AppInicialComponent } from './views/app-inicial/app-inicial.component';
 import { ChatComponent } from './component/chatbot1/chat/chat.component';
+import { LoginComponent } from './component/auth/login/login.component';
+import { CadastroComponent } from './component/auth/cadastro/cadastro.component';
 
+import { TokenInterceptor } from './component/interceptors/token.interceptor';
 
 
 
@@ -75,6 +78,8 @@ import { ChatComponent } from './component/chatbot1/chat/chat.component';
     ClienteDeleteComponent,
     AppInicialComponent,
     ChatComponent,
+    LoginComponent,
+    CadastroComponent,
   ],
   imports: [
     MatSelectModule,
@@ -92,7 +97,13 @@ import { ChatComponent } from './component/chatbot1/chat/chat.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

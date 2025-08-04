@@ -4,26 +4,45 @@
   <!-- Conteúdo da página -->
 </main>
 <mat-card class="fundo1">
-  <div style="display:flex; justify-content:flex-inicial">
-    <mat-card-title class="Nome">Novo Cliente</mat-card-title>
-  </div>
+  
+  
   <form>
+    <div class="grupo-superior">
+    <div class="Parte1">
+      <div style="display:flex; justify-content:flex-inicial">
+          <mat-card-title class="Nome">Novo Cliente</mat-card-title>
+          </div>
+    <div class="campos">
     <mat-form-field>
       <input matInput placeholder="Nome" [(ngModel)]="cliente.cliNome" name="cliNome">
     </mat-form-field>
     <mat-form-field>
       <input matInput placeholder="CPF" [(ngModel)]="cliente.cliCpf" name="cliCpf">
     </mat-form-field>
+  </div>
+</div>
 
-    <h3>Contato</h3>
+<div class="Parte2">
+    <div style="display:flex; justify-content:flex-inicial">
+      <mat-card-title class="Nome">Contato</mat-card-title>
+  </div>
+    
+    <div class="campos">
     <mat-form-field>
       <input matInput placeholder="E-mail" [(ngModel)]="cliente.contato.email" name="cliEmail">
     </mat-form-field>
     <mat-form-field>
       <input matInput placeholder="Telefone" [(ngModel)]="cliente.contato.telefone" name="cliTelefone">
     </mat-form-field>
+  </div>
+</div>
+</div>
 
-    <h3>Endereço</h3>
+   <div style="display:flex; justify-content:flex-inicial">
+    <mat-card-title class="Nome">Endereço</mat-card-title>
+    </div>
+
+    <div class="campos">
     <mat-form-field>
       <input matInput placeholder="Rua" [(ngModel)]="cliente.endereco.rua" name="rua">
     </mat-form-field>
@@ -38,7 +57,7 @@
     </mat-form-field>
     <mat-form-field>
       <input matInput placeholder="CEP" [(ngModel)]="cliente.endereco.cep" name="cep">
-    </mat-form-field>
+    </mat-form-field></div>
   </form>
 
   <div style="gap: 10px; display:flex; justify-content:flex-end">
