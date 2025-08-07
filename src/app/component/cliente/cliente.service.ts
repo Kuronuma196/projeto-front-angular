@@ -11,7 +11,6 @@ export class ClienteService {
 
   baseUrl = "http://localhost:8080/clientes"
 
-  //construtor onde injetamos o MatSnackBar e HttpClient;
   constructor(private snackBar: MatSnackBar, private http: HttpClient ) { }
 
   showMessage(msg: string): void {
@@ -21,28 +20,43 @@ export class ClienteService {
       verticalPosition: "top"
     })
   }
-//método para 
-create(cliente: Cliente): Observable<Cliente>{
-  return this.http.post<Cliente>(this.baseUrl, cliente)
-}
 
-//método para carregar os dados do produto
-  read(): Observable<Cliente[]>{
-    return this.http.get<Cliente[]>(this.baseUrl)
+  create(cliente: Cliente): Observable<Cliente> {
+    const clienteDTO = this.toDTO(cliente);
+    return this.http.post<Cliente>(this.baseUrl, clienteDTO);
   }
-//método para carregar os dados do produto por id
-  readById(cliId: string): Observable<Cliente>{
-    const url = `${this.baseUrl}/${cliId}`
-    return this.http.get<Cliente>(url)
+
+  read(): Observable<Cliente[]> {
+    return this.http.get<Cliente[]>(this.baseUrl);
   }
-//método para atualizar os dados do produto
-  update(cliente: Cliente): Observable<Cliente>{
-    const url = `${this.baseUrl}/${cliente.cliId}`
-    return this.http.put<Cliente>(url,cliente)
+
+  readById(cliId: string): Observable<Cliente> {
+    const url = `${this.baseUrl}/${cliId}`;
+    return this.http.get<Cliente>(url);
   }
-//método para deletar os dados do produto
-  delete(cliId: number): Observable<Cliente>{
-    const url = `${this.baseUrl}/${cliId}`
-    return this.http.delete<Cliente>(url)
+
+  update(cliente: Cliente): Observable<Cliente> {
+    const url = `${this.baseUrl}/${cliente.cliId}`;
+    return this.http.put<Cliente>(url, cliente);
+  }
+
+  delete(cliId: number): Observable<Cliente> {
+    const url = `${this.baseUrl}/${cliId}`;
+    return this.http.delete<Cliente>(url);
+  }
+
+  private toDTO(cliente: Cliente) {
+    return {
+      cliNome: cliente.cliNome,
+      cliCpf: cliente.cliCpf,
+      endRua: cliente.endereco.rua,
+      endNumero: cliente.endereco.numero,
+      endCidade: cliente.endereco.cidade,
+      endEstado: cliente.endereco.estado,
+      endCep: cliente.endereco.cep,
+      conEmail: cliente.contato.email,
+      conTelefoneComercial: cliente.contato.telefone,
+      tipoUsuario: 'CLIENTE'  // campo fixo enviado para backend
+    };
   }
 }

@@ -23,7 +23,8 @@ export class ClienteCreateComponent implements OnInit {
       cidade: '',
       estado: '',
       cep: ''
-    }
+    },
+    tipoUsuario: 'CLIENTE'  // <-- adiciona aqui o tipo fixo
   };
 
   constructor(private clienteService: ClienteService, private router: Router) {}
@@ -31,6 +32,9 @@ export class ClienteCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   createCliente(): void {
+    // Garante que o tipoUsuario está correto antes de enviar
+    this.cliente.tipoUsuario = 'CLIENTE';
+
     this.clienteService.create(this.cliente).subscribe(() => {
       this.clienteService.showMessage('Cliente adicionado!');
       this.router.navigate(['/clientes']);

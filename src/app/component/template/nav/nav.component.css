@@ -20,21 +20,25 @@
 }
 
 .nav-list a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(81, 121, 207, 0.668);
 }
 
 .anima {
   color: white;
-  transition: color 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  width: 0;
+  transition: all 0.2s ease;
 }
 
 .anima:hover {
-  color: rgb(0, 225, 255);
+  color: rgb(16, 24, 44);
 }
 
 .content {
   padding: 16px;
-  background-color: #fff;
+  background-color: #d8edff;
 }
 .container {
   height: 100vh;
@@ -58,7 +62,7 @@ mat-list-item {
   display: flex;
   align-items: center;
   padding: 12px;
-  color: #333;
+  color: #fffdfd;
 }
 
 .material-icons {
@@ -66,17 +70,15 @@ mat-list-item {
   font-size: 24px;
   width: 24px;
   text-align: center;
+  color: #ffffffd9;
+  
+}
+/*.material-icons:hover {
+  color: rgb(16, 24, 44);
 }
 
-.anima {
-  white-space: nowrap;
-  overflow: hidden;
-  opacity: 0;
-  width: 0;
-  transition: all 0.3s ease;
-}
 
-/* Quando o menu está expandido, mostrar texto */
+ Quando o menu está expandido, mostrar texto */
 .sidenav.expandido .anima {
   opacity: 1;
   width: auto;
