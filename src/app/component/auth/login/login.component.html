@@ -4,25 +4,27 @@
   <!-- Conteúdo da página -->
 </main>
 
+
+
 <div class="login-container">
   <h2>Login</h2>
-
-  <form (ngSubmit)="fazerLogin()" #loginForm="ngForm">
+  <form (ngSubmit)="fazerLogin()">
     <div class="form-group">
-      <label for="email">Email</label>
-      <input id="email" [(ngModel)]="email" name="email" type="email" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" required>
     </div>
-
     <div class="form-group">
-      <label for="senha">Senha</label>
-      <input id="senha" [(ngModel)]="senha" name="senha" type="password" required />
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" [(ngModel)]="senha" name="senha" required>
     </div>
-  <p class="cadastro-link">
+    <div *ngIf="erro" class="error-message">{{erro}}</div>
+    
+    <p class="cadastro-link">
     Não tem conta? <a routerLink="/cadastro">Cadastre-se aqui</a>
   </p>
 
-    <button type="submit">Entrar</button>
-
-    <div *ngIf="erro" class="erro">{{ erro }}</div>
+    <button type="submit" [disabled]="carregando">
+      {{ carregando ? 'Carregando...' : 'Entrar' }}
+    </button>
   </form>
 </div>

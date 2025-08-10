@@ -1,0 +1,50 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #161b22;
+  border-left: 1px solid #30363d;
+  padding: 1rem;
+  color: #f0f6fc;
+  height: 100%;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #1f6feb;
+}
+
+.profile-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.profile-status {
+  font-size: 0.85rem;
+  color: #8b949e;
+  margin-bottom: 1rem;
+}
+
+.profile-actions button {
+  background: #1f6feb;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  color: white;
+  margin: 0.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profile-actions button:hover {
+  background: #388bfd;
+}
+
+@media (max-width: 768px) {
+  :host {
+    display: none; /* Oculta o painel lateral no mobile */
+  }
+}

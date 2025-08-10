@@ -24,11 +24,16 @@ import { LoginComponent } from './component/auth/login/login.component';
 import { CadastroComponent } from './component/auth/cadastro/cadastro.component';
 
 import { AuthGuard } from './component/auth/auth.guard';
+import { ChatComponent } from './component/chat/chat.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
+
+  { path: 'contatos', component: ChatComponent },
+  // rota padrão ou fallback
+  { path: '', redirectTo: '/contatos', pathMatch: 'full' },
 
   {
     path: 'inicial',

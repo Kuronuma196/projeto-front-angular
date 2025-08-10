@@ -1,0 +1,62 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  background: #161b22;
+  color: #f0f6fc;
+  border-right: 1px solid #30363d;
+  height: 100%;
+}
+
+.contact-search {
+  padding: 0.8rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.contact-search input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  background: #0d1117;
+  color: #f0f6fc;
+}
+
+.contact-item {
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #30363d;
+  transition: background 0.3s;
+}
+
+.contact-item:hover {
+  background: #21262d;
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-name {
+  font-weight: bold;
+}
+
+.contact-last-message {
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+@media (max-width: 768px) {
+  :host {
+    flex: 0 0 100%;
+  }
+}

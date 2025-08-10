@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/template/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {NavComponent} from './component/template/nav/nav.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule } from '@angular/material/list';
-import {FooterComponent } from './component/template/footer/footer.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NavComponent } from './component/template/nav/nav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { FooterComponent } from './component/template/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductReadComponent } from './component/product/product-read/product-read.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -21,7 +21,7 @@ import { PagamentoReadComponent } from './component/Pagamento/pagamento-read/pag
 import { MatTableModule } from '@angular/material/table';
 import { ProductCreateComponent } from './component/product/product-create/product-create.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProductUpdateComponent } from './component/product/product-update/product-update.component';
@@ -41,14 +41,13 @@ import { ClienteUpdateComponent } from './component/cliente/cliente-update/clien
 import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
 import { MatSelectModule } from '@angular/material/select';
 import { AppInicialComponent } from './views/app-inicial/app-inicial.component';
-import { ChatComponent } from './component/chatbot1/chat/chat.component';
 import { LoginComponent } from './component/auth/login/login.component';
 import { CadastroComponent } from './component/auth/cadastro/cadastro.component';
 
 import { TokenInterceptor } from './component/interceptors/token.interceptor';
-
-
-
+// Ajuste o caminho abaixo conforme a localização real do chat.module.ts
+// Exemplo: Se estiver em 'src/app/component/chat/chat.module.ts', use:
+import { ChatModule } from './component/chat/chat.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,12 +76,10 @@ import { TokenInterceptor } from './component/interceptors/token.interceptor';
     ClienteUpdateComponent,
     ClienteDeleteComponent,
     AppInicialComponent,
-    ChatComponent,
     LoginComponent,
-    CadastroComponent,
+    CadastroComponent
   ],
   imports: [
-    MatSelectModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -95,7 +92,9 @@ import { TokenInterceptor } from './component/interceptors/token.interceptor';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
+    ChatModule   // <-- importante incluir aqui
   ],
   providers: [
     {

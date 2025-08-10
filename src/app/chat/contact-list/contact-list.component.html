@@ -1,1 +1,29 @@
-<p>contact-list works!</p>
+<div class="contact-list-container">
+  <div onkeypress=""
+    class="contact-card" 
+    *ngFor="let contato of contatos"
+    (click)="selecionarContato(contato)"
+    [class.selecionado]="contatoSelecionado?.id === contato.id"
+  >
+    <img class="avatar" [src]="contato.fotoUrl || 'assets/avatar-placeholder.png'" alt="Foto do contato">
+
+    <div class="info">
+      <div class="top">
+        <span class="nome">{{ contato.nome }}</span>
+        <span class="hora">{{ contato.ultimaMensagem?.hora || '...' }}</span>
+      </div>
+
+      <div class="bottom">
+        <span class="preview">{{ contato.ultimaMensagem?.texto || 'Sem mensagens' }}</span>
+        <span class="status-indicador" [class.online]="contato.online"></span>
+      </div>
+    </div>
+
+    <div *ngFor="let contato of contatos" 
+     (click)="selecionar(contato)" 
+     class="contato-item">
+  {{ contato.nome }}
+</div>
+
+  </div>
+</div>

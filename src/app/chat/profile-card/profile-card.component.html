@@ -1,1 +1,17 @@
-<p>profile-card works!</p>
+<div class="profile-card">
+  <img [src]="usuario?.fotoUrl || 'assets/img/default-profile.png'" class="profile-img" alt="Foto de perfil">
+
+  <div class="profile-info">
+    <h3>{{ usuario?.nome }}</h3>
+    <p class="status">{{ usuario?.status || 'Online' }}</p>
+  </div>
+
+  <div class="profile-actions">
+    <button (click)="abrirConfiguracoes()">
+      <i class="fas fa-cog"></i>
+    </button>
+    <button (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </div>
+</div>

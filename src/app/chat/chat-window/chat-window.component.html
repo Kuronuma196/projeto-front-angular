@@ -1,1 +1,64 @@
-<p>chat-window works!</p>
+<div class="chat-window" *ngIf="contato">
+  <div class="chat-header">
+    <img [src]="contato.fotoUrl || 'assets/default-user.png'" alt="Foto" class="contact-photo">
+    <h3>{{ contato.nome }}</h3>
+  </div>
+
+  <div class="chat-messages">
+    <div *ngFor="let msg of mensagens" class="message">
+      <div [class.sent]="msg.remetenteId === contato.id" [class.received]="msg.remetenteId !== contato.id">
+        <p>{{ msg.texto }}</p>
+        <small>{{ msg.dataHora | date:'shortTime' }}</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input 
+      type="text" 
+      placeholder="Digite uma mensagem..." 
+      [(ngModel)]="novaMensagem" 
+      (keyup.enter)="enviarMensagem()"
+    />
+    <button (click)="enviarMensagem()">Enviar</button>
+  </div>
+</div>
+
+<div *ngIf="!contato" class="no-selection">
+  Selecione um contato para iniciar o chat.
+</div>
+<div class="chat-window-container" *ngIf="contato">
+  <div class="chat-header">
+    <div class="contato-info">
+      <div class="nome-contato">{{ contato.nome }}</div>
+      <div class="status-contato">online</div>
+    </div>
+  </div>
+
+  <div class="chat-body">
+    <div *ngFor="let msg of mensagens" class="mensagem" [ngClass]="{'enviada': msg.remetenteId !== contato.id, 'recebida': msg.remetenteId === contato.id}">
+      <span class="mensagem-texto">{{ msg.texto }}</span>
+      <span class="mensagem-horario">{{ msg.dataHora | date:'shortTime' }}</span>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" [(ngModel)]="novaMensagem" placeholder="Digite uma mensagem..." (keyup.enter)="enviarMensagem()" />
+    <button (click)="enviarMensagem()">Enviar</button>
+  </div>
+
+  <div class="chat-window">
+  <div class="mensagens">
+    <div *ngFor="let msg of mensagens" class="mensagem">
+      <strong>{{ msg.remetenteId === contato?.id ? contato?.nome : 'Você' }}:</strong>
+      {{ msg.texto }}
+    </div>
+  </div>
+
+  <div class="input-area">
+    <input type="text" [(ngModel)]="novaMensagem" (keyup.enter)="enviaMensagem()" placeholder="Digite uma mensagem...">
+    <button (click)="enviaMensagem()">Enviar</button>
+  </div>
+</div>
+
+</div>

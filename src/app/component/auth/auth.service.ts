@@ -1,50 +1,37 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
-
-interface LoginResponse {
-  token: string;
-}
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private API = 'http://localhost:8080/auth';
+  private readonly API_URL = 'http://localhost:8080/auth';
+  private readonly TOKEN_KEY = 'auth_token';
 
   constructor(private http: HttpClient) {}
 
- login(email: string, senha: string): Observable<LoginResponse> {
-  const headers = new HttpHeaders({
-    'Content-Type': 'application/json',
-    'Accept': 'application/json'
-  });
+  login(email: string, senha: string): Observable<{ token: string }> {
+    return this.http.post<{ token: string }>(`${this.API_URL}/login`, { email, senha });
+  }
 
-  return this.http.post<LoginResponse>(
-    `${this.API}/login`, 
-    { email, senha }, 
-    { headers }
-  );
-}
-  cadastrar(usuario: any): Observable<any> {
-    return this.http.post(`${this.API}/cadastro`, usuario);
+  cadastrar(usuario: any): Observable<{ token: string }> {
+    return this.http.post<{ token: string }>(`${this.API_URL}/cadastro`, usuario);
   }
 
   salvarToken(token: string): void {
-    localStorage.setItem('token', token);
+    localStorage.setItem(this.TOKEN_KEY, token);
   }
 
   getToken(): string | null {
-    return localStorage.getItem('token');
+    return localStorage.getItem(this.TOKEN_KEY);
   }
 
   logout(): void {
-    localStorage.removeItem('token');
+    localStorage.removeItem(this.TOKEN_KEY);
   }
 
   isLoggedIn(): boolean {
-    const token = this.getToken();
-    return token !== null && token !== '';
+    return this.getToken() !== null;
   }
 }
